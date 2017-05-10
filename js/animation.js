@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     function init() {
-        bmiForm.style.display = 'block';
+        bmiForm.style.display = 'inline-block';
         caloriesForm.style.display = 'none';
         basicMetaForm.style.display = 'none';
         totalMetaForm.style.display = 'none';
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function firstFormShow() {
         // if (bmiForm.style.display === 'none') {
-        bmiForm.style.display = 'block';
+        bmiForm.style.display = 'inline-block';
         caloriesForm.style.display = 'none';
         basicMetaForm.style.display = 'none';
         totalMetaForm.style.display = 'none';
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function secondFormShow() {
         // if (bmiForm.style.display === 'none') {
         bmiForm.style.display = 'none';
-        caloriesForm.style.display = 'block';
+        caloriesForm.style.display = 'inline-block';
         basicMetaForm.style.display = 'none';
         totalMetaForm.style.display = 'none';
         //        } else {
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // if (bmiForm.style.display === 'none') {
         bmiForm.style.display = 'none';
         caloriesForm.style.display = 'none';
-        basicMetaForm.style.display = 'block';
+        basicMetaForm.style.display = 'inline-block';
         totalMetaForm.style.display = 'none';
         //        } else {
         //            bmiForm.display = 'none';
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
         bmiForm.style.display = 'none';
         caloriesForm.style.display = 'none';
         basicMetaForm.style.display = 'none';
-        totalMetaForm.style.display = 'block';
+        totalMetaForm.style.display = 'inline-block';
         //        } else {
         //            bmiForm.display = 'none';
         //        }

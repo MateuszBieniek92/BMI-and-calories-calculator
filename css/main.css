@@ -129,13 +129,28 @@ section .photo {
 .formBackground {
   width: 350px;
   height: 550px;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.7);
   position: relative;
   top: 100px;
-  border: 3px solid rgba(255, 255, 255, 0.8);
-  border-radius: 5px;
-  transition: 2s; }
+  /* border: 3px solid rgba(255, 255, 255, 0.8); */
+  border-radius: 2px; }
 
-/* line 111, scss/main.css */
-.visible {
-  display: inline-block; }
+/* line 110, scss/main.css */
+.bmi p {
+  font-size: 25px;
+  margin: 25px 0;
+  text-align: center;
+  font-weight: 500; }
+
+/* line 116, scss/main.css */
+.bmi label {
+  font-size: 25px; }
+
+/* line 119, scss/main.css */
+.bmi .bmiBtn {
+  width: 125px;
+  height: 50px;
+  background: #ff971f;
+  text-align: center;
+  margin: 20px 0;
+  position: relative; }

@@ -1,0 +1,57 @@
+header {
+    .logo {
+        font-size: 30px;
+        font-weight: 800;
+        color: #ff971f;
+        margin-top: 25px;
+        margin-bottom: 10px;
+    }
+    .navigation {
+        margin-top: 15px;
+        text-align: center;
+        list-style: none;
+        padding-top: 10px;
+        border-top: 2px solid rgba(123, 123, 123, 0.1);
+        li {
+            font-size: 25px;
+            padding: 0 10px;
+            color: black;
+            text-decoration: none;
+            display: inline;
+            a {
+                text-decoration: none;
+                color: black;
+                font-size: 25px;
+                font-weight: 400;
+            }
+            a:hover {
+                color: #ff971f;
+                transition: 1s;
+            }
+        }
+    }
+}
+
+section {
+    .photo {
+        background-image: url(../photos/background_photo.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center top;
+        height: 80vh;
+        top: 150px;
+        position: absolute;
+        width: 95vw;
+        left: 42px;
+    }
+}
+
+.formBackground {
+    width: 350px;
+    height: 550px;
+    background: rgba(255, 255, 255, 0.4);
+    position: relative;
+    top: 100px;
+    border: 3px solid rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+}

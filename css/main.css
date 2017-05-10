@@ -89,25 +89,31 @@ header .navigation {
 
 /* line 71, scss/main.css */
 header .navigation li {
+  cursor: pointer;
   font-size: 25px;
   padding: 0 10px;
   color: black;
   text-decoration: none;
   display: inline; }
 
-/* line 77, scss/main.css */
+/* line 78, scss/main.css */
 header .navigation li a {
   text-decoration: none;
   color: black;
   font-size: 25px;
   font-weight: 400; }
 
-/* line 82, scss/main.css */
+/* line 83, scss/main.css */
 header .navigation li a:hover {
   color: #ff971f;
   transition: 1s; }
 
 /* line 86, scss/main.css */
+header .navigation li a:focus {
+  color: #ff971f;
+  transition: 1s; }
+
+/* line 90, scss/main.css */
 section .photo {
   background-image: url(../photos/background_photo.png);
   background-size: cover;
@@ -119,7 +125,7 @@ section .photo {
   width: 95vw;
   left: 42px; }
 
-/* line 97, scss/main.css */
+/* line 101, scss/main.css */
 .formBackground {
   width: 350px;
   height: 550px;
@@ -127,4 +133,9 @@ section .photo {
   position: relative;
   top: 100px;
   border: 3px solid rgba(255, 255, 255, 0.8);
-  border-radius: 5px; }
+  border-radius: 5px;
+  transition: 2s; }
+
+/* line 111, scss/main.css */
+.visible {
+  display: inline-block; }

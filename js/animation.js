@@ -9,12 +9,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const secondMenuBtn = document.querySelector('.btnTwo');
     const thirdMenuBtn = document.querySelector('.btnThree');
     const fourthMenuBtn = document.querySelector('.btnFour');
-    
-    
-    
+
+
+
     const hamburgerBtn = document.querySelector('.hamburger');
+    const navigation = document.querySelector('.navigation');
+    const navigationChildren = navigation.querySelectorAll('li');
 
     console.log(bmiForm, caloriesForm);
+    console.log(navigationChildren);
 
 
     function init() {
@@ -26,53 +29,46 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     function firstFormShow() {
-        // if (bmiForm.style.display === 'none') {
         bmiForm.style.display = 'block';
         caloriesForm.style.display = 'none';
         basicMetaForm.style.display = 'none';
         totalMetaForm.style.display = 'none';
-        //        } else {
-        //            bmiForm.display = 'none';
-        //        }
     }
 
     function secondFormShow() {
-        // if (bmiForm.style.display === 'none') {
         bmiForm.style.display = 'none';
         caloriesForm.style.display = 'block';
         basicMetaForm.style.display = 'none';
         totalMetaForm.style.display = 'none';
-        //        } else {
-        //            bmiForm.display = 'none';
-        //        }
     }
 
     function thirdFormShow() {
-        // if (bmiForm.style.display === 'none') {
         bmiForm.style.display = 'none';
         caloriesForm.style.display = 'none';
         basicMetaForm.style.display = 'block';
         totalMetaForm.style.display = 'none';
-        //        } else {
-        //            bmiForm.display = 'none';
-        //        }
     }
 
     function fourthFormShow() {
-        // if (bmiForm.style.display === 'none') {
         bmiForm.style.display = 'none';
         caloriesForm.style.display = 'none';
         basicMetaForm.style.display = 'none';
         totalMetaForm.style.display = 'block';
-        //        } else {
-        //            bmiForm.display = 'none';
-        //        }
-    }
-    
-    function toggleHamburger(x) {
-        x.classList.toggle('change');
     }
 
+    function toggleHamburger(type) {
+        type.classList.toggle('change');
+    }
+
+    function toggleMenu() {
+        if (navigation.style.display === 'block') {
+            navigation.style.display = 'none';
+        } else {
+            navigation.style.display = 'block';
+        }
+    }
+
+    // CLICK EVENTS    
 
     firstMenuBtn.addEventListener('click', function () {
         firstFormShow();
@@ -93,26 +89,18 @@ document.addEventListener("DOMContentLoaded", function () {
         fourthFormShow();
         console.log('click');
     });
-    
-    
-    
+
+
+
     hamburgerBtn.addEventListener('click', function () {
         toggleHamburger(this);
+        toggleMenu();
         console.log('click');
     });
 
 
+    
     init();
-    
-    
+
+
 });
-
-
-//function myFunction() {
-//    var x = document.getElementById('myDIV');
-//    if (x.style.display === 'none') {
-//        x.style.display = 'block';
-//    } else {
-//        x.style.display = 'none';
-//    }
-//}

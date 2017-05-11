@@ -103,14 +103,16 @@ header .navigation {
   margin-top: 15px;
   text-align: center;
   list-style: none;
+  display: none;
   border-top: 3px solid rgba(123, 123, 123, 0.1); }
 
 @media (min-width: 900px) {
-  /* line 85, scss/main.css */
+  /* line 86, scss/main.css */
   header .navigation {
-    padding-top: 10px; } }
+    padding-top: 10px;
+    display: block; } }
 
-/* line 87, scss/main.css */
+/* line 89, scss/main.css */
 header .navigation li {
   cursor: pointer;
   font-size: 25px;
@@ -121,30 +123,30 @@ header .navigation li {
   border-bottom: 2px solid rgba(123, 123, 123, 0.1); }
 
 @media (min-width: 900px) {
-  /* line 96, scss/main.css */
+  /* line 98, scss/main.css */
   header .navigation li {
     border-bottom: none;
     padding: 0 10px;
     display: inline; } }
 
-/* line 100, scss/main.css */
+/* line 102, scss/main.css */
 header .navigation li a {
   text-decoration: none;
   color: black;
   font-size: 25px;
   font-weight: 400; }
 
-/* line 105, scss/main.css */
+/* line 107, scss/main.css */
 header .navigation li a:hover {
   color: #ff971f;
   transition: 1s; }
 
-/* line 108, scss/main.css */
+/* line 110, scss/main.css */
 header .navigation li a:focus {
   color: #ff971f;
   transition: 1s; }
 
-/* line 112, scss/main.css */
+/* line 114, scss/main.css */
 section .photo {
   background-image: url(../photos/background_photo.png);
   background-size: cover;
@@ -155,19 +157,19 @@ section .photo {
   width: 100vw; }
 
 @media (min-width: 450px) {
-  /* line 121, scss/main.css */
+  /* line 123, scss/main.css */
   section .photo {
     height: 80vh; } }
 
 @media (min-width: 900px) {
-  /* line 124, scss/main.css */
+  /* line 126, scss/main.css */
   section .photo {
     margin-top: 0;
     left: 42px;
     top: 150px;
     width: 95vw; } }
 
-/* line 130, scss/main.css */
+/* line 132, scss/main.css */
 .formBackground {
   width: 95vw;
   height: 550px;
@@ -179,28 +181,28 @@ section .photo {
   margin: auto; }
 
 @media (min-width: 900px) {
-  /* line 140, scss/main.css */
+  /* line 142, scss/main.css */
   .formBackground {
     width: 350px; } }
 
 @media (min-width: 900px) {
-  /* line 143, scss/main.css */
+  /* line 145, scss/main.css */
   .formBackground {
     position: absolute;
     top: 100px; } }
 
-/* line 147, scss/main.css */
+/* line 149, scss/main.css */
 .bmi p {
   font-size: 25px;
   margin: 25px 0;
   text-align: center;
   font-weight: 500; }
 
-/* line 153, scss/main.css */
+/* line 155, scss/main.css */
 .bmi label {
   font-size: 25px; }
 
-/* line 156, scss/main.css */
+/* line 158, scss/main.css */
 .bmi .bmiBtn {
   width: 125px;
   height: 50px;
@@ -209,7 +211,7 @@ section .photo {
   margin: 20px 0;
   position: relative; }
 
-/* line 164, scss/main.css */
+/* line 166, scss/main.css */
 .bar1,
 .bar2,
 .bar3 {
@@ -219,16 +221,20 @@ section .photo {
   margin: 6px 0;
   transition: 0.4s; }
 
-/* line 173, scss/main.css */
+/* line 175, scss/main.css */
 .change .bar1 {
   -webkit-transform: rotate(-45deg) translate(-9px, 6px);
   transform: rotate(-45deg) translate(-9px, 6px); }
 
-/* line 177, scss/main.css */
+/* line 179, scss/main.css */
 .change .bar2 {
   opacity: 0; }
 
-/* line 180, scss/main.css */
+/* line 182, scss/main.css */
 .change .bar3 {
   -webkit-transform: rotate(45deg) translate(-8px, -8px);
   transform: rotate(45deg) translate(-8px, -8px); }
+
+/* line 186, scss/main.css */
+.visible {
+  display: none; }

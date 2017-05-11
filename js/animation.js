@@ -9,12 +9,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const secondMenuBtn = document.querySelector('.btnTwo');
     const thirdMenuBtn = document.querySelector('.btnThree');
     const fourthMenuBtn = document.querySelector('.btnFour');
+    
+    
+    
+    const hamburgerBtn = document.querySelector('.hamburger');
 
     console.log(bmiForm, caloriesForm);
 
 
     function init() {
-        bmiForm.style.display = 'inline-block';
+        bmiForm.style.display = 'block';
         caloriesForm.style.display = 'none';
         basicMetaForm.style.display = 'none';
         totalMetaForm.style.display = 'none';
@@ -23,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function firstFormShow() {
         // if (bmiForm.style.display === 'none') {
-        bmiForm.style.display = 'inline-block';
+        bmiForm.style.display = 'block';
         caloriesForm.style.display = 'none';
         basicMetaForm.style.display = 'none';
         totalMetaForm.style.display = 'none';
@@ -35,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function secondFormShow() {
         // if (bmiForm.style.display === 'none') {
         bmiForm.style.display = 'none';
-        caloriesForm.style.display = 'inline-block';
+        caloriesForm.style.display = 'block';
         basicMetaForm.style.display = 'none';
         totalMetaForm.style.display = 'none';
         //        } else {
@@ -47,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // if (bmiForm.style.display === 'none') {
         bmiForm.style.display = 'none';
         caloriesForm.style.display = 'none';
-        basicMetaForm.style.display = 'inline-block';
+        basicMetaForm.style.display = 'block';
         totalMetaForm.style.display = 'none';
         //        } else {
         //            bmiForm.display = 'none';
@@ -59,10 +63,14 @@ document.addEventListener("DOMContentLoaded", function () {
         bmiForm.style.display = 'none';
         caloriesForm.style.display = 'none';
         basicMetaForm.style.display = 'none';
-        totalMetaForm.style.display = 'inline-block';
+        totalMetaForm.style.display = 'block';
         //        } else {
         //            bmiForm.display = 'none';
         //        }
+    }
+    
+    function toggleHamburger(x) {
+        x.classList.toggle('change');
     }
 
 
@@ -83,6 +91,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     fourthMenuBtn.addEventListener('click', function () {
         fourthFormShow();
+        console.log('click');
+    });
+    
+    
+    
+    hamburgerBtn.addEventListener('click', function () {
+        toggleHamburger(this);
         console.log('click');
     });
 

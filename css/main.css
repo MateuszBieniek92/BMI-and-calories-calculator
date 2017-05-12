@@ -69,9 +69,10 @@
 [class*='col-'] {
   float: left;
   min-height: 1px;
+  border: 1px solid red;
   padding: 10px; }
 
-/* line 58, scss/main.css */
+/* line 59, scss/main.css */
 header .hamburger {
   display: inline-block;
   float: right;
@@ -80,11 +81,11 @@ header .hamburger {
   right: 30px; }
 
 @media (min-width: 900px) {
-  /* line 65, scss/main.css */
+  /* line 66, scss/main.css */
   header .hamburger {
     display: none; } }
 
-/* line 68, scss/main.css */
+/* line 69, scss/main.css */
 header .logo {
   font-size: 25px;
   font-weight: 800;
@@ -92,17 +93,17 @@ header .logo {
   margin: 25px 0 10px 15px; }
 
 @media (min-width: 900px) {
-  /* line 74, scss/main.css */
+  /* line 75, scss/main.css */
   header .logo {
     margin: 25px 0 10px 50px;
     font-size: 30px; } }
 
 @media (min-width: 1200px) {
-  /* line 78, scss/main.css */
+  /* line 79, scss/main.css */
   header .logo {
     margin: 25px 0 10px 15px; } }
 
-/* line 81, scss/main.css */
+/* line 82, scss/main.css */
 header .navigation {
   margin-top: 15px;
   text-align: center;
@@ -111,12 +112,12 @@ header .navigation {
   border-top: 3px solid rgba(123, 123, 123, 0.1); }
 
 @media (min-width: 900px) {
-  /* line 88, scss/main.css */
+  /* line 89, scss/main.css */
   header .navigation {
     padding-top: 10px;
     display: block; } }
 
-/* line 91, scss/main.css */
+/* line 92, scss/main.css */
 header .navigation li {
   cursor: pointer;
   font-size: 25px;
@@ -127,13 +128,13 @@ header .navigation li {
   border-bottom: 2px solid rgba(123, 123, 123, 0.1); }
 
 @media (min-width: 900px) {
-  /* line 100, scss/main.css */
+  /* line 101, scss/main.css */
   header .navigation li {
     border-bottom: none;
     padding: 0 10px;
     display: inline; } }
 
-/* line 104, scss/main.css */
+/* line 105, scss/main.css */
 header .navigation li a {
   text-decoration: none;
   color: black;
@@ -141,21 +142,21 @@ header .navigation li a {
   font-weight: 400; }
 
 @media (min-width: 1200px) {
-  /* line 110, scss/main.css */
+  /* line 111, scss/main.css */
   header .navigation li a {
     font-size: 25px; } }
 
-/* line 112, scss/main.css */
+/* line 113, scss/main.css */
 header .navigation li a:hover {
   color: #ff971f;
   transition: 1s; }
 
-/* line 115, scss/main.css */
+/* line 116, scss/main.css */
 header .navigation li a:focus {
   color: #ff971f;
   transition: 1s; }
 
-/* line 119, scss/main.css */
+/* line 120, scss/main.css */
 section .photo {
   background-image: url(../photos/background_photo.png);
   background-size: cover;
@@ -166,19 +167,19 @@ section .photo {
   width: 100vw; }
 
 @media (min-width: 450px) {
-  /* line 128, scss/main.css */
+  /* line 129, scss/main.css */
   section .photo {
     height: 80vh; } }
 
 @media (min-width: 900px) {
-  /* line 131, scss/main.css */
+  /* line 132, scss/main.css */
   section .photo {
     margin-top: 0;
     left: 42px;
     top: 150px;
     width: 95vw; } }
 
-/* line 137, scss/main.css */
+/* line 138, scss/main.css */
 .formBackground {
   width: 95vw;
   height: 80vh;
@@ -190,13 +191,13 @@ section .photo {
   margin: auto; }
 
 @media (min-width: 450px) {
-  /* line 147, scss/main.css */
+  /* line 148, scss/main.css */
   .formBackground {
     width: 350px;
     height: 550px; } }
 
 @media (min-width: 900px) {
-  /* line 151, scss/main.css */
+  /* line 152, scss/main.css */
   .formBackground {
     right: 250px;
     position: relative;
@@ -204,11 +205,11 @@ section .photo {
     height: 550px; } }
 
 @media (min-width: 1200px) {
-  /* line 157, scss/main.css */
+  /* line 158, scss/main.css */
   .formBackground {
     right: 400px; } }
 
-/* line 160, scss/main.css */
+/* line 161, scss/main.css */
 .bmi p {
   padding-top: 25px;
   font-size: 25px;
@@ -216,38 +217,38 @@ section .photo {
   text-align: center;
   font-weight: 500; }
 
-/* line 166, scss/main.css */
+/* line 167, scss/main.css */
 .bmi p span {
   font-size: 27px;
   font-weight: 600; }
 
-/* line 170, scss/main.css */
+/* line 171, scss/main.css */
 .bmi .bmiForm label {
   font-size: 20px;
   margin: 0px 30px 0 10px;
   top: 2px;
   position: relative; }
 
-/* line 176, scss/main.css */
+/* line 177, scss/main.css */
 .bmi .bmiForm .gender {
   width: 30px;
   height: 30px;
   margin: 20px 0 20px 15px; }
 
-/* line 181, scss/main.css */
+/* line 182, scss/main.css */
 .bmi .bmiForm input[type='text'] {
   height: 35px;
   width: 150px; }
 
-/* line 185, scss/main.css */
+/* line 186, scss/main.css */
 .bmi .bmiForm .firstInputBmi {
   margin: 20px 0 20px -10px; }
 
-/* line 188, scss/main.css */
+/* line 189, scss/main.css */
 .bmi .bmiForm .secondInputBmi {
   margin: 20px 0 20px 0px; }
 
-/* line 191, scss/main.css */
+/* line 192, scss/main.css */
 .bmi .bmiForm input[type='radio'] {
   width: 30px;
   height: 30px;
@@ -255,7 +256,7 @@ section .photo {
   position: relative;
   top: 9px; }
 
-/* line 198, scss/main.css */
+/* line 199, scss/main.css */
 .bmi .bmiBtn {
   cursor: pointer;
   margin-left: 2%;
@@ -266,7 +267,7 @@ section .photo {
   position: relative; }
 
 @media (min-width: 450px) {
-  /* line 207, scss/main.css */
+  /* line 208, scss/main.css */
   .bmi .bmiBtn {
     margin-left: 11%;
     width: 265px;
@@ -275,7 +276,7 @@ section .photo {
     text-align: center;
     position: relative; } }
 
-/* line 214, scss/main.css */
+/* line 215, scss/main.css */
 .bmi .bmiBtn p {
   text-shadow: 1px 1px 3px #854900;
   font-size: 17px;
@@ -286,18 +287,18 @@ section .photo {
   letter-spacing: 1px; }
 
 @media (min-width: 450px) {
-  /* line 223, scss/main.css */
+  /* line 224, scss/main.css */
   .bmi .bmiBtn p {
     padding-top: calc(50% - 118px);
     margin: 15px auto; } }
 
-/* line 227, scss/main.css */
+/* line 228, scss/main.css */
 .bmi .bmiBtn:hover {
   background: #ffaf5e;
   background-image: linear-gradient(to bottom, #ffaf5e, #ff8400);
   text-decoration: none; }
 
-/* line 232, scss/main.css */
+/* line 233, scss/main.css */
 .bar1,
 .bar2,
 .bar3 {
@@ -307,20 +308,20 @@ section .photo {
   margin: 6px 0;
   transition: 0.4s; }
 
-/* line 241, scss/main.css */
+/* line 242, scss/main.css */
 .change .bar1 {
   -webkit-transform: rotate(-45deg) translate(-9px, 6px);
   transform: rotate(-45deg) translate(-9px, 6px); }
 
-/* line 245, scss/main.css */
+/* line 246, scss/main.css */
 .change .bar2 {
   opacity: 0; }
 
-/* line 248, scss/main.css */
+/* line 249, scss/main.css */
 .change .bar3 {
   -webkit-transform: rotate(45deg) translate(-8px, -8px);
   transform: rotate(45deg) translate(-8px, -8px); }
 
-/* line 252, scss/main.css */
+/* line 253, scss/main.css */
 .visible {
   display: none; }

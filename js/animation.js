@@ -10,14 +10,28 @@ document.addEventListener("DOMContentLoaded", function () {
     const thirdMenuBtn = document.querySelector('.btnThree');
     const fourthMenuBtn = document.querySelector('.btnFour');
 
-
-
     const hamburgerBtn = document.querySelector('.hamburger');
     const navigation = document.querySelector('.navigation');
     const navigationChildren = navigation.querySelectorAll('li');
 
+    const bmiBtn = document.querySelector('.bmiBtn');
+
     console.log(bmiForm, caloriesForm);
     console.log(navigationChildren);
+
+    function bmiTEST() {
+
+
+        var test = heightVal * Math.pow(10, -2);
+        var mass = weightVal;
+        var bmi = mass / Math.pow(test, 2);
+        console.log(test, mass);
+        console.log(bmi);
+
+        var t = document.querySelector('.test');
+        t.innerText = Math.round(bmi * 4) / 4;
+
+    }
 
 
     function init() {
@@ -90,16 +104,56 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log('click');
     });
 
-
-
     hamburgerBtn.addEventListener('click', function () {
         toggleHamburger(this);
         toggleMenu();
         console.log('click');
     });
 
+    bmiBtn.addEventListener('click', function (e) {
+        const form = document.querySelector('.bmiForm');
+        const height = form.querySelector('.firstInputBmi');
+        const weight = form.querySelector('.secondInputBmi');
 
-    
+        const heightVal = height.value;
+        const weightVal = weight.value;
+        const numbersOnlyExpression = /^[0-9]+$/;
+
+        const sendForm = 'false';
+        const t = document.querySelector('.test');
+        if (heightVal == "") {
+            if (heightVal.length > 1) {
+                if (weightVal.length > 1) {
+                    if (weightVal == "") {} else {
+                        t.innerHTML = 'Proszę wypełnić pole formularza!';
+                    }
+                } else {
+                    t.innerHTML = 'Nieprawidłowa waga ciała.';
+                }
+            } else {
+                t.innerHTML = 'Nieprawidłowa wzrost';
+            }
+        } else {
+            t.innerHTML = 'Proszę wypełnić pole formularza!';
+        }
+
+        e.preventDefault();
+        console.log(heightVal, weightVal);
+
+        const test = heightVal * Math.pow(10, -2);
+        const mass = weightVal;
+        const bmi = mass / Math.pow(test, 2);
+        console.log(test, mass);
+        console.log(bmi);
+
+
+        t.innerText = Math.round(bmi * 4) / 4;
+
+        console.log(height);
+    });
+
+
+
     init();
 
 

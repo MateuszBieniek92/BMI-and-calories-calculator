@@ -32,30 +32,35 @@
     </header>
     <section>
         <div class="photo">
-        <div class="container row">
-            <div class="formBackground bmi">
-                <p>Oblicz swój wskaźnik <span>BMI</span></p>
-                <form class="bmiForm">
-                    <label>Płeć:</label>
-                    <input type="radio">
-                    <label class="gender">K</label>
-                    <input type="radio">
-                    <label class="gender">M</label>
-                    <br>
-                    <label>Wzrost:</label>
-                    <input type="text" class="firstInputBmi"> <label>cm</label>
-                    <br>
-                    <label>Waga:</label>
-                    <input type="text" class="secondInputBmi"> <label>kg</label>
-                </form>
-                <div class="bmiBtn"><p>OBLICZ!</p></div>
+            <div class="container row">
+                    <div class="formBackground bmi">
+                        <p>Oblicz swój wskaźnik <span>BMI</span></p>
+                        <form class="bmiForm">
+                            <label>Płeć:</label>
+                            <input type="radio" name="womanRadio">
+                            <label class="gender">K</label>
+                            <input type="radio"name="menRadio">
+                            <label class="gender">M</label>
+                            <br>
+                            <label>Wzrost:</label>
+                            <input type="text" class="firstInputBmi" id="height" name="height">
+                            <label>cm</label>
+                            <br>
+                            <label>Waga:</label>
+                            <input type="text" class="secondInputBmi" id="weight" name="weight">
+                            <label>kg</label>
+                            
+                            <label class="test"></label>
+                        </form>
+                        <div class="bmiBtn" type="submit">
+                            <p>OBLICZ!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="formBackground calories"> CALORIES calc</div>
+                <div class="formBackground basicMetabolism"> podstawowa przemiana materii</div>
+                <div class="formBackground totalMetabolism"> calkowita przemiana materii</div>
             </div>
-            
-            <div class="formBackground calories"> CALORIES calc</div>
-            <div class="formBackground basicMetabolism"> podstawowa przemiana materii</div>
-            <div class="formBackground totalMetabolism"> calkowita przemiana materii</div>
-        </div>
-</div>
     </section>
 
 </body>

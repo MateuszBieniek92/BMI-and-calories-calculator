@@ -94,11 +94,15 @@ header .logo {
 @media (min-width: 900px) {
   /* line 74, scss/main.css */
   header .logo {
-    font-size: 30px;
-    margin-top: 25px;
-    margin-bottom: 10px; } }
+    margin: 25px 0 10px 50px;
+    font-size: 30px; } }
 
-/* line 79, scss/main.css */
+@media (min-width: 1200px) {
+  /* line 78, scss/main.css */
+  header .logo {
+    margin: 25px 0 10px 15px; } }
+
+/* line 81, scss/main.css */
 header .navigation {
   margin-top: 15px;
   text-align: center;
@@ -107,12 +111,12 @@ header .navigation {
   border-top: 3px solid rgba(123, 123, 123, 0.1); }
 
 @media (min-width: 900px) {
-  /* line 86, scss/main.css */
+  /* line 88, scss/main.css */
   header .navigation {
     padding-top: 10px;
     display: block; } }
 
-/* line 89, scss/main.css */
+/* line 91, scss/main.css */
 header .navigation li {
   cursor: pointer;
   font-size: 25px;
@@ -123,30 +127,35 @@ header .navigation li {
   border-bottom: 2px solid rgba(123, 123, 123, 0.1); }
 
 @media (min-width: 900px) {
-  /* line 98, scss/main.css */
+  /* line 100, scss/main.css */
   header .navigation li {
     border-bottom: none;
     padding: 0 10px;
     display: inline; } }
 
-/* line 102, scss/main.css */
+/* line 104, scss/main.css */
 header .navigation li a {
   text-decoration: none;
   color: black;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 400; }
 
-/* line 107, scss/main.css */
+@media (min-width: 1200px) {
+  /* line 110, scss/main.css */
+  header .navigation li a {
+    font-size: 25px; } }
+
+/* line 112, scss/main.css */
 header .navigation li a:hover {
   color: #ff971f;
   transition: 1s; }
 
-/* line 110, scss/main.css */
+/* line 115, scss/main.css */
 header .navigation li a:focus {
   color: #ff971f;
   transition: 1s; }
 
-/* line 114, scss/main.css */
+/* line 119, scss/main.css */
 section .photo {
   background-image: url(../photos/background_photo.png);
   background-size: cover;
@@ -157,61 +166,138 @@ section .photo {
   width: 100vw; }
 
 @media (min-width: 450px) {
-  /* line 123, scss/main.css */
+  /* line 128, scss/main.css */
   section .photo {
     height: 80vh; } }
 
 @media (min-width: 900px) {
-  /* line 126, scss/main.css */
+  /* line 131, scss/main.css */
   section .photo {
     margin-top: 0;
     left: 42px;
     top: 150px;
     width: 95vw; } }
 
-/* line 132, scss/main.css */
+/* line 137, scss/main.css */
 .formBackground {
   width: 95vw;
-  height: 550px;
-  background: rgba(255, 255, 255, 0.7);
+  height: 80vh;
+  background: rgba(255, 255, 255, 0.8);
   position: relative;
   top: 30px;
   border-radius: 2px;
   display: block;
   margin: auto; }
 
-@media (min-width: 900px) {
-  /* line 142, scss/main.css */
+@media (min-width: 450px) {
+  /* line 147, scss/main.css */
   .formBackground {
-    width: 350px; } }
+    width: 350px;
+    height: 550px; } }
 
 @media (min-width: 900px) {
-  /* line 145, scss/main.css */
+  /* line 151, scss/main.css */
   .formBackground {
-    position: absolute;
-    top: 100px; } }
+    right: 250px;
+    position: relative;
+    top: 50px;
+    height: 550px; } }
 
-/* line 149, scss/main.css */
+@media (min-width: 1200px) {
+  /* line 157, scss/main.css */
+  .formBackground {
+    right: 400px; } }
+
+/* line 160, scss/main.css */
 .bmi p {
+  padding-top: 25px;
   font-size: 25px;
   margin: 25px 0;
   text-align: center;
   font-weight: 500; }
 
-/* line 155, scss/main.css */
-.bmi label {
-  font-size: 25px; }
+/* line 166, scss/main.css */
+.bmi p span {
+  font-size: 27px;
+  font-weight: 600; }
 
-/* line 158, scss/main.css */
+/* line 170, scss/main.css */
+.bmi .bmiForm label {
+  font-size: 20px;
+  margin: 0px 30px 0 10px;
+  top: 2px;
+  position: relative; }
+
+/* line 176, scss/main.css */
+.bmi .bmiForm .gender {
+  width: 30px;
+  height: 30px;
+  margin: 20px 0 20px 15px; }
+
+/* line 181, scss/main.css */
+.bmi .bmiForm input[type='text'] {
+  height: 35px;
+  width: 150px; }
+
+/* line 185, scss/main.css */
+.bmi .bmiForm .firstInputBmi {
+  margin: 20px 0 20px -10px; }
+
+/* line 188, scss/main.css */
+.bmi .bmiForm .secondInputBmi {
+  margin: 20px 0 20px 0px; }
+
+/* line 191, scss/main.css */
+.bmi .bmiForm input[type='radio'] {
+  width: 30px;
+  height: 30px;
+  margin: 20px 0 20px 15px;
+  position: relative;
+  top: 9px; }
+
+/* line 198, scss/main.css */
 .bmi .bmiBtn {
-  width: 125px;
+  cursor: pointer;
+  margin-left: 2%;
+  width: 90vw;
   height: 50px;
   background: #ff971f;
   text-align: center;
-  margin: 20px 0;
   position: relative; }
 
-/* line 166, scss/main.css */
+@media (min-width: 450px) {
+  /* line 207, scss/main.css */
+  .bmi .bmiBtn {
+    margin-left: 11%;
+    width: 265px;
+    height: 50px;
+    background: #ff971f;
+    text-align: center;
+    position: relative; } }
+
+/* line 214, scss/main.css */
+.bmi .bmiBtn p {
+  text-shadow: 1px 1px 3px #854900;
+  font-size: 17px;
+  color: white;
+  font-weight: 600;
+  padding-top: calc(50% - 148px);
+  margin: 50px auto;
+  letter-spacing: 1px; }
+
+@media (min-width: 450px) {
+  /* line 223, scss/main.css */
+  .bmi .bmiBtn p {
+    padding-top: calc(50% - 118px);
+    margin: 15px auto; } }
+
+/* line 227, scss/main.css */
+.bmi .bmiBtn:hover {
+  background: #ffaf5e;
+  background-image: linear-gradient(to bottom, #ffaf5e, #ff8400);
+  text-decoration: none; }
+
+/* line 232, scss/main.css */
 .bar1,
 .bar2,
 .bar3 {
@@ -221,20 +307,20 @@ section .photo {
   margin: 6px 0;
   transition: 0.4s; }
 
-/* line 175, scss/main.css */
+/* line 241, scss/main.css */
 .change .bar1 {
   -webkit-transform: rotate(-45deg) translate(-9px, 6px);
   transform: rotate(-45deg) translate(-9px, 6px); }
 
-/* line 179, scss/main.css */
+/* line 245, scss/main.css */
 .change .bar2 {
   opacity: 0; }
 
-/* line 182, scss/main.css */
+/* line 248, scss/main.css */
 .change .bar3 {
   -webkit-transform: rotate(45deg) translate(-8px, -8px);
   transform: rotate(45deg) translate(-8px, -8px); }
 
-/* line 186, scss/main.css */
+/* line 252, scss/main.css */
 .visible {
   display: none; }

@@ -37,9 +37,9 @@
                         <p>Oblicz swój wskaźnik <span>BMI</span></p>
                         <form class="bmiForm">
                             <label id="genderType">Płeć:</label>
-                            <input type="radio" name="womanRadio">
+                            <input type="radio" name="Radio" value="1" class="womanRadio">
                             <label class="gender" id="genderWoman">K</label>
-                            <input type="radio"name="menRadio">
+                            <input type="radio"name="Radio" value="2" class="menRadio">
                             <label class="gender" id="genderMan">M</label>
                             <br>
                             <label id="heightLabel">Wzrost:</label>
@@ -50,7 +50,7 @@
                             <input type="text" class="secondInputBmi" id="weight" name="weight">
                             <label id="kgUnit">kg</label>
                             
-                            <label class="test"></label>
+                            <label class="errorLabel"></label>
                         </form>
                         <div class="bmiBtn" type="button">
                             <p>OBLICZ!</p>

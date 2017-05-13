@@ -152,6 +152,11 @@ section {
             position: relative;
             top: 9px;
         }
+        .errorLabel {
+            font-size: 16px;
+            font-weight: 500;
+            color: red;
+        }
     }
     .bmiBtn {
         cursor: pointer;
@@ -161,7 +166,9 @@ section {
         background: $bgLogoColor;
         text-align: center;
         position: relative;
+        margin: 50px auto;
         @media (min-width: 450px) {
+            margin: 85px auto;
             margin-left: 11%;
             width: 265px;
             height: 50px;
@@ -175,11 +182,11 @@ section {
             color: white;
             font-weight: 600;
             padding-top: calc(50% - 148px);
-            margin: 50px auto;
+            //margin: 50px auto;
             letter-spacing: 1px;
             @media (min-width: 450px) {
                 padding-top: calc(50% - 118px);
-                margin: 15px auto;
+                margin: 85px auto;
             }
         }
     }

@@ -257,6 +257,12 @@ section .photo {
   top: 9px; }
 
 /* line 199, scss/main.css */
+.bmi .bmiForm .errorLabel {
+  font-size: 16px;
+  font-weight: 500;
+  color: red; }
+
+/* line 204, scss/main.css */
 .bmi .bmiBtn {
   cursor: pointer;
   margin-left: 2%;
@@ -264,11 +270,13 @@ section .photo {
   height: 50px;
   background: #ff971f;
   text-align: center;
-  position: relative; }
+  position: relative;
+  margin: 50px auto; }
 
 @media (min-width: 450px) {
-  /* line 208, scss/main.css */
+  /* line 214, scss/main.css */
   .bmi .bmiBtn {
+    margin: 85px auto;
     margin-left: 11%;
     width: 265px;
     height: 50px;
@@ -276,29 +284,28 @@ section .photo {
     text-align: center;
     position: relative; } }
 
-/* line 215, scss/main.css */
+/* line 222, scss/main.css */
 .bmi .bmiBtn p {
   text-shadow: 1px 1px 3px #854900;
   font-size: 17px;
   color: white;
   font-weight: 600;
   padding-top: calc(50% - 148px);
-  margin: 50px auto;
   letter-spacing: 1px; }
 
 @media (min-width: 450px) {
-  /* line 224, scss/main.css */
+  /* line 230, scss/main.css */
   .bmi .bmiBtn p {
     padding-top: calc(50% - 118px);
-    margin: 15px auto; } }
+    margin: 85px auto; } }
 
-/* line 228, scss/main.css */
+/* line 234, scss/main.css */
 .bmi .bmiBtn:hover {
   background: #ffaf5e;
   background-image: linear-gradient(to bottom, #ffaf5e, #ff8400);
   text-decoration: none; }
 
-/* line 233, scss/main.css */
+/* line 239, scss/main.css */
 .bar1,
 .bar2,
 .bar3 {
@@ -308,20 +315,20 @@ section .photo {
   margin: 6px 0;
   transition: 0.4s; }
 
-/* line 242, scss/main.css */
+/* line 248, scss/main.css */
 .change .bar1 {
   -webkit-transform: rotate(-45deg) translate(-9px, 6px);
   transform: rotate(-45deg) translate(-9px, 6px); }
 
-/* line 246, scss/main.css */
+/* line 252, scss/main.css */
 .change .bar2 {
   opacity: 0; }
 
-/* line 249, scss/main.css */
+/* line 255, scss/main.css */
 .change .bar3 {
   -webkit-transform: rotate(45deg) translate(-8px, -8px);
   transform: rotate(45deg) translate(-8px, -8px); }
 
-/* line 253, scss/main.css */
+/* line 259, scss/main.css */
 .visible {
   display: none; }

@@ -25,8 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
         var test = heightVal * Math.pow(10, -2);
         var mass = weightVal;
         var bmi = mass / Math.pow(test, 2);
-        console.log(test, mass);
-        console.log(bmi);
+        // console.log(test, mass);
+        //console.log(bmi);
 
         var t = document.querySelector('.test');
         t.innerText = Math.round(bmi * 4) / 4;
@@ -86,34 +86,48 @@ document.addEventListener("DOMContentLoaded", function () {
 
     firstMenuBtn.addEventListener('click', function () {
         firstFormShow();
-        console.log('click');
     });
 
     secondMenuBtn.addEventListener('click', function () {
         secondFormShow();
-        console.log('click');
     });
 
     thirdMenuBtn.addEventListener('click', function () {
         thirdFormShow();
-        console.log('click');
     });
 
     fourthMenuBtn.addEventListener('click', function () {
         fourthFormShow();
-        console.log('click');
     });
 
     hamburgerBtn.addEventListener('click', function () {
         toggleHamburger(this);
         toggleMenu();
-        console.log('click');
     });
 
+
+    const form = document.querySelector('.bmiForm');
+    const height = form.querySelector('.firstInputBmi');
+    const weight = form.querySelector('.secondInputBmi');
+    const menRadio = form.querySelector('.menRadio')
+    const womanRadio = form.querySelector('.womanRadio')
+
+
+    console.log(form.elements);
+
+    // height label
+    const heightLabel = document.querySelector('#heightLabel');
+    const cmLabel = form.querySelector('#cmUnit');
+
+    // weight label
+    const weightLabel = document.querySelector('#weightLabel');
+    const kgLabel = form.querySelector('#kgUnit');
+
+
+
+
+
     bmiBtn.addEventListener('click', function (e) {
-        const form = document.querySelector('.bmiForm');
-        const height = form.querySelector('.firstInputBmi');
-        const weight = form.querySelector('.secondInputBmi');
 
         const heightVal = height.value;
         const weightVal = weight.value;
@@ -124,13 +138,22 @@ document.addEventListener("DOMContentLoaded", function () {
         const text = document.querySelector('.test');
         text.innerText = '';
 
-       // console.log(heightVal, weightVal);
+        // console.log(heightVal, weightVal);
 
+
+        // bmi parameters
         const test = heightVal * Math.pow(10, -2);
         const mass = weightVal;
         const bmi = mass / Math.pow(test, 2);
         console.log(test, mass);
         console.log(bmi);
+
+        heightLabel.style.color = "black";
+        cmLabel.style.color = "black";
+        height.style.border = "none";
+        weightLabel.style.color = "black";
+        kgLabel.style.color = "black";
+        weight.style.border = "none";
 
 
         if (heightVal !== "" && weightVal !== "") {
@@ -141,14 +164,36 @@ document.addEventListener("DOMContentLoaded", function () {
                         sendForm = true;
                     } else {
                         text.innerText = "Podana waga nie jest prawidłowa!"
+                        weightLabel.style.color = "red";
+                        kgLabel.style.color = "red";
+                        weight.style.border = "2px solid red";
                     }
                 } else {
                     text.innerText = "Podany wzrost nie jest prawidłowy!"
+                    heightLabel.style.color = "red";
+                    cmLabel.style.color = "red";
+                    height.style.border = "2px solid red";
                 }
             } else {
                 text.innerText = "Podane parametry nie są liczbami!"
+                heightLabel.style.color = "red";
+                cmLabel.style.color = "red";
+                height.style.border = "2px solid red";
+                weightLabel.style.color = "red";
+                kgLabel.style.color = "red";
+                weight.style.border = "2px solid red";
+
             }
         } else {
+            if (heightVal !== "") {
+                weightLabel.style.color = "red";
+                kgLabel.style.color = "red";
+                weight.style.border = "2px solid red";
+            } else if (weightVal !== "") {
+                heightLabel.style.color = "red";
+                cmLabel.style.color = "red";
+                height.style.border = "2px solid red";
+            }
             text.innerText = "Wypełnij pole formularza!"
         }
 

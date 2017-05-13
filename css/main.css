@@ -263,7 +263,7 @@ section .photo {
   color: red; }
 
 /* line 204, scss/main.css */
-.bmi .bmiBtn {
+.bmiBtn {
   cursor: pointer;
   margin-left: 2%;
   width: 90vw;
@@ -275,7 +275,7 @@ section .photo {
 
 @media (min-width: 450px) {
   /* line 214, scss/main.css */
-  .bmi .bmiBtn {
+  .bmiBtn {
     margin: 85px auto;
     margin-left: 11%;
     width: 265px;
@@ -285,7 +285,7 @@ section .photo {
     position: relative; } }
 
 /* line 222, scss/main.css */
-.bmi .bmiBtn p {
+.bmiBtn p {
   text-shadow: 1px 1px 3px #854900;
   font-size: 17px;
   color: white;
@@ -295,12 +295,12 @@ section .photo {
 
 @media (min-width: 450px) {
   /* line 230, scss/main.css */
-  .bmi .bmiBtn p {
+  .bmiBtn p {
     padding-top: calc(50% - 118px);
     margin: 85px auto; } }
 
 /* line 234, scss/main.css */
-.bmi .bmiBtn:hover {
+.bmiBtn:hover {
   background: #ffaf5e;
   background-image: linear-gradient(to bottom, #ffaf5e, #ff8400);
   text-decoration: none; }
@@ -332,3 +332,17 @@ section .photo {
 /* line 259, scss/main.css */
 .visible {
   display: none; }
+
+/* line 262, scss/main.css */
+.bgClick {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  z-index: 500;
+  opacity: 0.9;
+  position: absolute;
+  top: 0;
+  background-image: url(../photos/background_photo_blur.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top; }

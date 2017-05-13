@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const isNumericHeight = parseInt(heightVal);
         const isNumericWeight = parseInt(weightVal);
 
-        let sendForm = 'false';
+        //let sendForm = 'false';
         const errorText = document.querySelector('.errorLabel');
         errorText.innererrorText = '';
 
@@ -113,6 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         heightLabel.style.color = "black";
         genderLabel.style.color = "black";
+        errorText.style.color = "black";
         manLabel.style.color = "black";
         womanLabel.style.color = "black";
         cmLabel.style.color = "black";
@@ -128,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     if (weightVal.length > 1) {
                         if (menRadio.checked == true || womanRadio.checked == true) {
                             errorText.innerText = 'Twoje BMI wynosi: ' + roundNumber(bmi, 2);
-                            sendForm = true;
+                           // sendForm = true;
                         } else {
                             errorText.innerText = "Zaznacz płeć!"
                             genderLabel.style.color = "red";
@@ -156,6 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 kgLabel.style.color = "red";
                 weight.style.border = "2px solid red";
             }
+
         } else {
             if (heightVal !== "") {
                 weightLabel.style.color = "red";
@@ -173,7 +175,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 kgLabel.style.color = "red";
                 weight.style.border = "2px solid red";
             }
-            errorText.innerText = "Wypełnij pole formularza!"
+            errorText.innerText = "Wypełnij dane formularza!"
         }
         console.log(height);
     }

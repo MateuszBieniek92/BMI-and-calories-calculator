@@ -158,43 +158,45 @@ section {
             color: red;
         }
     }
-    .bmiBtn {
-        cursor: pointer;
-        margin-left: 2%;
-        width: 90vw;
+}
+
+.bmiBtn {
+    cursor: pointer;
+    margin-left: 2%;
+    width: 90vw;
+    height: 50px;
+    background: $bgLogoColor;
+    text-align: center;
+    position: relative;
+    margin: 50px auto;
+    @media (min-width: 450px) {
+        margin: 85px auto;
+        margin-left: 11%;
+        width: 265px;
         height: 50px;
-        background: $bgLogoColor;
+        background: #ff971f;
         text-align: center;
         position: relative;
-        margin: 50px auto;
+    }
+    p {
+        text-shadow: 1px 1px 3px #854900;
+        font-size: 17px;
+        color: white;
+        font-weight: 600;
+        padding-top: calc(50% - 148px);
+        //margin: 50px auto;
+        letter-spacing: 1px;
         @media (min-width: 450px) {
+            padding-top: calc(50% - 118px);
             margin: 85px auto;
-            margin-left: 11%;
-            width: 265px;
-            height: 50px;
-            background: #ff971f;
-            text-align: center;
-            position: relative;
-        }
-        p {
-            text-shadow: 1px 1px 3px #854900;
-            font-size: 17px;
-            color: white;
-            font-weight: 600;
-            padding-top: calc(50% - 148px);
-            //margin: 50px auto;
-            letter-spacing: 1px;
-            @media (min-width: 450px) {
-                padding-top: calc(50% - 118px);
-                margin: 85px auto;
-            }
         }
     }
-    .bmiBtn:hover {
-        background: #ffaf5e;
-        background-image: linear-gradient(to bottom, #ffaf5e, #ff8400);
-        text-decoration: none;
-    }
+}
+
+.bmiBtn:hover {
+    background: #ffaf5e;
+    background-image: linear-gradient(to bottom, #ffaf5e, #ff8400);
+    text-decoration: none;
 }
 
 .bar1,
@@ -223,4 +225,18 @@ section {
 
 .visible {
     display: none;
+}
+
+.bgClick {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    z-index: 500;
+    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    background-image: url(../photos/background_photo_blur.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
 }

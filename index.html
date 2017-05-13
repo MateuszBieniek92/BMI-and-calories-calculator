@@ -36,23 +36,23 @@
                     <div class="formBackground bmi">
                         <p>Oblicz swój wskaźnik <span>BMI</span></p>
                         <form class="bmiForm">
-                            <label>Płeć:</label>
+                            <label name="genderType">Płeć:</label>
                             <input type="radio" name="womanRadio">
-                            <label class="gender">K</label>
+                            <label class="gender" name="genderWoman">K</label>
                             <input type="radio"name="menRadio">
-                            <label class="gender">M</label>
+                            <label class="gender" name="genderMan">M</label>
                             <br>
-                            <label>Wzrost:</label>
+                            <label name="heightLabel">Wzrost:</label>
                             <input type="text" class="firstInputBmi" id="height" name="height">
-                            <label>cm</label>
+                            <label name="cmUnit">cm</label>
                             <br>
-                            <label>Waga:</label>
+                            <label name="weightLabel">Waga:</label>
                             <input type="text" class="secondInputBmi" id="weight" name="weight">
-                            <label>kg</label>
+                            <label name="kgLabel">kg</label>
                             
                             <label class="test"></label>
                         </form>
-                        <div class="bmiBtn" type="submit">
+                        <div class="bmiBtn" type="button">
                             <p>OBLICZ!</p>
                         </div>
                     </div>

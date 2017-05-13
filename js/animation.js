@@ -117,28 +117,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const heightVal = height.value;
         const weightVal = weight.value;
-        const numbersOnlyExpression = /^[0-9]+$/;
+        const isNumericHeight = parseInt(heightVal);
+        const isNumericWeight = parseInt(weightVal);
 
-        const sendForm = 'false';
-        const t = document.querySelector('.test');
-        if (heightVal == "") {
-            if (heightVal.length > 1) {
-                if (weightVal.length > 1) {
-                    if (weightVal == "") {} else {
-                        t.innerHTML = 'Proszę wypełnić pole formularza!';
-                    }
-                } else {
-                    t.innerHTML = 'Nieprawidłowa waga ciała.';
-                }
-            } else {
-                t.innerHTML = 'Nieprawidłowa wzrost';
-            }
-        } else {
-            t.innerHTML = 'Proszę wypełnić pole formularza!';
-        }
+        let sendForm = 'false';
+        const text = document.querySelector('.test');
+        text.innerText = '';
 
-        e.preventDefault();
-        console.log(heightVal, weightVal);
+       // console.log(heightVal, weightVal);
 
         const test = heightVal * Math.pow(10, -2);
         const mass = weightVal;
@@ -147,11 +133,29 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(bmi);
 
 
-        t.innerText = Math.round(bmi * 4) / 4;
+        if (heightVal !== "" && weightVal !== "") {
+            if (isNumericHeight && isNumericWeight) {
+                if (heightVal.length > 2) {
+                    if (weightVal.length > 1) {
+                        text.innerText = Math.round(bmi * 4) / 4;
+                        sendForm = true;
+                    } else {
+                        text.innerText = "Podana waga nie jest prawidłowa!"
+                    }
+                } else {
+                    text.innerText = "Podany wzrost nie jest prawidłowy!"
+                }
+            } else {
+                text.innerText = "Podane parametry nie są liczbami!"
+            }
+        } else {
+            text.innerText = "Wypełnij pole formularza!"
+        }
 
         console.log(height);
-    });
+        e.preventDefault();
 
+    });
 
 
     init();

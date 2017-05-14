@@ -232,11 +232,21 @@ section {
     width: 100vw;
     height: 100vh;
     z-index: 500;
-    opacity: 0.9;
+    opacity: 1;
     position: absolute;
     top: 0;
     background-image: url(../photos/background_photo_blur.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
+    .finalFormBg {
+        right: 0;
+        top: 150px;
+        width: 600px;
+        height: 500px;
+        background: rgba(255, 255, 255, 1);
+    }
+    .closeFormBtn {
+        margin-left: auto;
+    }
 }

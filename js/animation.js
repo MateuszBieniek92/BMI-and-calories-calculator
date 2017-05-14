@@ -35,6 +35,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const weightLabel = document.querySelector('#weightLabel');
     const kgLabel = form.querySelector('#kgUnit');
 
+    //close form bg
+    const closeFormBg = document.querySelector('.bgClick');
+    // close form btn
+    const closeBtn = closeFormBg.querySelector('.closeFormBtn');
+
+
     console.log(bmiForm, caloriesForm);
     console.log(navigationChildren);
 
@@ -87,8 +93,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function roundNumber(n, k) {
-        var factor = Math.pow(10, k);
+        const factor = Math.pow(10, k);
         return Math.round(n * factor) / factor;
+    }
+
+    function closeForm() {
+        closeFormBg.style.display = "none";
+    }
+
+    function sendForm() {
+        closeFormBg.style.display = "block";
     }
 
     function bmiFormSend() {
@@ -128,8 +142,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (heightVal.length > 2) {
                     if (weightVal.length > 1) {
                         if (menRadio.checked == true || womanRadio.checked == true) {
-                            errorText.innerText = 'Twoje BMI wynosi: ' + roundNumber(bmi, 2);
-                           // sendForm = true;
+                            //errorText.innerText = 'Twoje BMI wynosi: ' + roundNumber(bmi, 2);
+                            // sendForm = true;
+                            sendForm();
                         } else {
                             errorText.innerText = "Zaznacz płeć!"
                             genderLabel.style.color = "red";
@@ -206,6 +221,9 @@ document.addEventListener("DOMContentLoaded", function () {
     bmiBtn.addEventListener('click', function (e) {
         bmiFormSend();
         e.preventDefault();
+    });
+    closeBtn.addEventListener('click', function () {
+        closeForm();
     });
 
 

@@ -37,17 +37,17 @@
                     <p>Oblicz swój wskaźnik <span>BMI</span></p>
                     <form class="bmiForm">
                         <label id="genderType">Płeć:</label>
-                        <input type="radio" name="Radio" value="1" class="womanRadio" placeholder=" ">
+                        <input type="radio" name="Radio" value="1" class="womanRadio" placeholder="">
                         <label class="gender" id="genderWoman">K</label>
-                        <input type="radio" name="Radio" value="2" class="menRadio" placeholder=" ">
+                        <input type="radio" name="Radio" value="2" class="menRadio" placeholder="">
                         <label class="gender" id="genderMan">M</label>
                         <br>
                         <label id="heightLabel">Wzrost:</label>
-                        <input type="text" class="firstInputBmi" id="height" name="height" placeholder=" ">
+                        <input type="text" class="firstInputBmi" id="height" name="height" placeholder="">
                         <label id="cmUnit">cm</label>
                         <br>
                         <label id="weightLabel">Waga:</label>
-                        <input type="text" class="secondInputBmi" id="weight" name="weight"placeholder=" ">
+                        <input type="text" class="secondInputBmi" id="weight" name="weight" placeholder="">
                         <label id="kgUnit">kg</label>
 
                         <label class="errorLabel"></label>
@@ -57,7 +57,47 @@
                     </div>
                 </div>
             </div>
-            <div class="formBackground calories"> CALORIES calc
+            <div class="formBackground calories">
+                <p>Oblicz swoje dzienne zapotrzebowanie na <span>kalorie.</span></p>
+                <form class="caloriesForm">
+                    <label id="genderType">Płeć:</label>
+                    <input type="radio" name="Radio" value="1" class="womanRadio" placeholder=" ">
+                    <label class="gender" id="genderWoman">K</label>
+                    <input type="radio" name="Radio" value="2" class="menRadio" placeholder=" ">
+                    <label class="gender" id="genderMan">M</label>
+                    <br>
+                    <label id="heightLabel">Wiek:</label>
+                    <input type="text" class="firstInputBmi old" id="height" name="old" placeholder="">
+                    <label id="oldUnit">(18-99)</label>
+                    <br>
+                    <label id="heightLabel">Wzrost:</label>
+                    <input type="text" class="firstInputBmi" id="height" name="height" placeholder=" ">
+                    <label id="cmUnit">cm</label>
+                    <br>
+                    <label id="weightLabel">Waga:</label>
+                    <input type="text" class="secondInputBmi" id="weight" name="weight" placeholder=" ">
+                    <label id="kgUnit">kg</label>
+                    <br>
+                    <label id="kgUnit">Poziom aktywności fizycznej: </label>
+                    <select>
+                        <option value="zeroActyvity">Brak aktywności fizycznej</option>
+                        <option value="smallActyvity">Mała aktywność fizyczna (1-3 razy tygodniowo)</option>
+                        <option value="mediumActyvity">Średnia aktywność fizyczna (3-5 razy tygodniowo)</option>
+                        <option value="bigActyvity">Duża aktywność fizyczna (codziennie)</option>
+                        <option value="veryBigActyvity">Bardzo duża aktywność fizyczna (codziennie)</option>
+                    </select>
+
+                    <label class="errorLabel"></label>
+                </form>
+                <div class="caloriesBtn" type="button">
+                    <p>OBLICZ!</p>
+                </div>
+
+
+
+
+
+
             </div>
             <div class="formBackground basicMetabolism"> podstawowa przemiana materii</div>
             <div class="formBackground totalMetabolism"> calkowita przemiana materii</div>
@@ -71,16 +111,16 @@
                     description"></span>!</p>
                 <div class="bmiScale">
                     <h2>Zakresy wartości BMI</h2>
-                        <ul class="list">
-                            <li>16,0 – wygłodzenie </li>
-                            <li> 16,0–16,99 – wychudzenie (spowodowane często przez ciężką chorobę lub anoreksję) </li>
-                            <li> 17,0–18,49 – niedowagę </li>
-                            <li> 18,5–24,99 – wartość prawidłową </li>
-                            <li> 25,0–29,99 – nadwagę </li>
-                            <li> 30,0–34,99 – I stopień otyłości </li>
-                            <li> 35,0–39,99 – II stopień otyłości (otyłość kliniczna) </li>
-                            <li> ≥ 40,0 – III stopień otyłości (otyłość skrajna) </li>
-                        </ul>
+                    <ul class="list">
+                        <li>16,0 – wygłodzenie </li>
+                        <li> 16,0–16,99 – wychudzenie (spowodowane często przez ciężką chorobę lub anoreksję) </li>
+                        <li> 17,0–18,49 – niedowagę </li>
+                        <li> 18,5–24,99 – wartość prawidłową </li>
+                        <li> 25,0–29,99 – nadwagę </li>
+                        <li> 30,0–34,99 – I stopień otyłości </li>
+                        <li> 35,0–39,99 – II stopień otyłości (otyłość kliniczna) </li>
+                        <li> ≥ 40,0 – III stopień otyłości (otyłość skrajna) </li>
+                    </ul>
                 </div>
             </div>
 

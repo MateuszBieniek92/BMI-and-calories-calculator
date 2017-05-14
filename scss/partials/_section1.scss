@@ -113,8 +113,13 @@ section {
         right: 400px;
     }
 }
+.calories {
+        @media (min-width: 1200px) {
+        width: 400px;
+    }
+}
 
-.bmi {
+.bmi, .calories {
     p {
         padding-top: 25px;
         font-size: 25px;
@@ -126,7 +131,8 @@ section {
             font-weight: 600;
         }
     }
-    .bmiForm {
+
+    .bmiForm, .caloriesForm {
         label {
             font-size: 20px;
             margin: 0px 30px 0 10px;
@@ -141,6 +147,9 @@ section {
         input[type='text'] {
             height: 35px;
             width: 150px;
+        }
+        .old {
+            margin: 20px 0 20px -10px;
         }
         .firstInputBmi {
             margin: 20px 0 20px -10px;
@@ -163,7 +172,7 @@ section {
     }
 }
 
-.bmiBtn {
+.bmiBtn, .caloriesBtn {
     cursor: pointer;
     margin-left: 2%;
     width: 90vw;
@@ -196,7 +205,7 @@ section {
     }
 }
 
-.bmiBtn:hover {
+.bmiBtn:hover, .caloriesBtn:hover {
     background: #ffaf5e;
     background-image: linear-gradient(to bottom, #ffaf5e, #ff8400);
     text-decoration: none;

@@ -214,61 +214,70 @@ section .photo {
   .formBackground {
     right: 400px; } }
 
-/* line 164, scss/main.css */
-.bmi p {
+@media (min-width: 1200px) {
+  /* line 165, scss/main.css */
+  .calories {
+    width: 400px; } }
+
+/* line 168, scss/main.css */
+.bmi p, .calories p {
   padding-top: 25px;
   font-size: 25px;
   margin: 25px 0;
   text-align: center;
   font-weight: 500; }
 
-/* line 170, scss/main.css */
-.bmi p span {
+/* line 174, scss/main.css */
+.bmi p span, .calories p span {
   font-size: 27px;
   font-weight: 600; }
 
-/* line 174, scss/main.css */
-.bmi .bmiForm label {
+/* line 178, scss/main.css */
+.bmi .bmiForm label, .bmi .caloriesForm label, .calories .bmiForm label, .calories .caloriesForm label {
   font-size: 20px;
   margin: 0px 30px 0 10px;
   top: 2px;
   position: relative; }
 
-/* line 180, scss/main.css */
-.bmi .bmiForm .gender {
+/* line 184, scss/main.css */
+.bmi .bmiForm .gender, .bmi .caloriesForm .gender, .calories .bmiForm .gender, .calories .caloriesForm .gender {
   width: 30px;
   height: 30px;
   margin: 20px 0 20px 15px; }
 
-/* line 185, scss/main.css */
-.bmi .bmiForm input[type='text'] {
+/* line 189, scss/main.css */
+.bmi .bmiForm input[type='text'], .bmi .caloriesForm input[type='text'], .calories .bmiForm input[type='text'], .calories .caloriesForm input[type='text'] {
   height: 35px;
   width: 150px; }
 
-/* line 189, scss/main.css */
-.bmi .bmiForm .firstInputBmi {
+/* line 193, scss/main.css */
+.bmi .bmiForm .old, .bmi .caloriesForm .old, .calories .bmiForm .old, .calories .caloriesForm .old {
   margin: 20px 0 20px -10px; }
 
-/* line 192, scss/main.css */
-.bmi .bmiForm .secondInputBmi {
+/* line 196, scss/main.css */
+.bmi .bmiForm .firstInputBmi, .bmi .caloriesForm .firstInputBmi, .calories .bmiForm .firstInputBmi, .calories .caloriesForm .firstInputBmi {
+  margin: 20px 0 20px -10px; }
+
+/* line 199, scss/main.css */
+.bmi .bmiForm .secondInputBmi, .bmi .caloriesForm .secondInputBmi, .calories .bmiForm .secondInputBmi, .calories .caloriesForm .secondInputBmi {
   margin: 20px 0 20px 0px; }
 
-/* line 195, scss/main.css */
-.bmi .bmiForm input[type='radio'] {
+/* line 202, scss/main.css */
+.bmi .bmiForm input[type='radio'], .bmi .caloriesForm input[type='radio'], .calories .bmiForm input[type='radio'], .calories .caloriesForm input[type='radio'] {
   width: 30px;
   height: 30px;
   margin: 20px 0 20px 15px;
   position: relative;
   top: 9px; }
 
-/* line 202, scss/main.css */
-.bmi .bmiForm .errorLabel {
+/* line 209, scss/main.css */
+.bmi .bmiForm .errorLabel, .bmi .caloriesForm .errorLabel, .calories .bmiForm .errorLabel, .calories .caloriesForm .errorLabel {
   font-size: 16px;
   font-weight: 500;
   color: red; }
 
-/* line 207, scss/main.css */
-.bmiBtn {
+/* line 214, scss/main.css */
+.bmiBtn, .caloriesBtn {
   cursor: pointer;
   margin-left: 2%;
   width: 90vw;
@@ -279,8 +288,8 @@ section .photo {
   margin: 50px auto; }
 
 @media (min-width: 450px) {
-  /* line 217, scss/main.css */
-  .bmiBtn {
+  /* line 224, scss/main.css */
+  .bmiBtn, .caloriesBtn {
     margin: 85px auto;
     margin-left: 11%;
     width: 265px;
@@ -289,8 +298,8 @@ section .photo {
     text-align: center;
     position: relative; } }
 
-/* line 225, scss/main.css */
-.bmiBtn p {
+/* line 232, scss/main.css */
+.bmiBtn p, .caloriesBtn p {
   text-shadow: 1px 1px 3px #854900;
   font-size: 17px;
   color: white;
@@ -299,18 +308,18 @@ section .photo {
   letter-spacing: 1px; }
 
 @media (min-width: 450px) {
-  /* line 233, scss/main.css */
-  .bmiBtn p {
+  /* line 240, scss/main.css */
+  .bmiBtn p, .caloriesBtn p {
     padding-top: calc(50% - 118px);
     margin: 85px auto; } }
 
-/* line 237, scss/main.css */
-.bmiBtn:hover {
+/* line 244, scss/main.css */
+.bmiBtn:hover, .caloriesBtn:hover {
   background: #ffaf5e;
   background-image: linear-gradient(to bottom, #ffaf5e, #ff8400);
   text-decoration: none; }
 
-/* line 242, scss/main.css */
+/* line 249, scss/main.css */
 .bar1,
 .bar2,
 .bar3 {
@@ -320,25 +329,25 @@ section .photo {
   margin: 6px 0;
   transition: 0.4s; }
 
-/* line 251, scss/main.css */
+/* line 258, scss/main.css */
 .change .bar1 {
   -webkit-transform: rotate(-45deg) translate(-9px, 6px);
   transform: rotate(-45deg) translate(-9px, 6px); }
 
-/* line 255, scss/main.css */
+/* line 262, scss/main.css */
 .change .bar2 {
   opacity: 0; }
 
-/* line 258, scss/main.css */
+/* line 265, scss/main.css */
 .change .bar3 {
   -webkit-transform: rotate(45deg) translate(-8px, -8px);
   transform: rotate(45deg) translate(-8px, -8px); }
 
-/* line 262, scss/main.css */
+/* line 269, scss/main.css */
 .visible {
   display: none; }
 
-/* line 265, scss/main.css */
+/* line 272, scss/main.css */
 .bgClick {
   display: none;
   width: 100vw;
@@ -352,7 +361,7 @@ section .photo {
   background-repeat: no-repeat;
   background-position: center top; }
 
-/* line 277, scss/main.css */
+/* line 284, scss/main.css */
 .bgClick .finalFormBg {
   right: 0;
   top: 85px;
@@ -361,12 +370,12 @@ section .photo {
   background: white; }
 
 @media (min-width: 450px) {
-  /* line 284, scss/main.css */
+  /* line 291, scss/main.css */
   .bgClick .finalFormBg {
     top: 150px;
     width: 600px; } }
 
-/* line 287, scss/main.css */
+/* line 294, scss/main.css */
 .bgClick .finalFormBg h2 {
   font-size: 25px;
   font-weight: 600;
@@ -375,27 +384,27 @@ section .photo {
   padding: 20px 0; }
 
 @media (min-width: 450px) {
-  /* line 294, scss/main.css */
+  /* line 301, scss/main.css */
   .bgClick .finalFormBg h2 {
     font-size: 25px; } }
 
-/* line 296, scss/main.css */
+/* line 303, scss/main.css */
 .bgClick .finalFormBg p {
   font-size: 20px;
   text-align: center;
   padding: 20px; }
 
-/* line 300, scss/main.css */
+/* line 307, scss/main.css */
 .bgClick .finalFormBg p span {
   font-size: 20px;
   font-weight: 600;
   color: #ff971f; }
 
-/* line 304, scss/main.css */
+/* line 311, scss/main.css */
 .bgClick .bmiScale {
   display: none; }
 
-/* line 306, scss/main.css */
+/* line 313, scss/main.css */
 .bgClick .bmiScale h2 {
   font-size: 25px;
   font-weight: 600;
@@ -404,29 +413,29 @@ section .photo {
   padding: 20px 0; }
 
 @media (min-width: 450px) {
-  /* line 313, scss/main.css */
+  /* line 320, scss/main.css */
   .bgClick .bmiScale h2 {
     font-size: 25px; } }
 
-/* line 315, scss/main.css */
+/* line 322, scss/main.css */
 .bgClick .bmiScale .list {
   padding-top: 10px;
   text-align: center;
   font-size: 15px;
   list-style: none; }
 
-/* line 320, scss/main.css */
+/* line 327, scss/main.css */
 .bgClick .bmiScale .list li {
   text-align: center;
   list-style: none;
   font-size: 13px; }
 
 @media (min-width: 450px) {
-  /* line 325, scss/main.css */
+  /* line 332, scss/main.css */
   .bgClick .bmiScale .list li {
     font-size: 15px; } }
 
-/* line 327, scss/main.css */
+/* line 334, scss/main.css */
 .bgClick .closeFormBtn {
   cursor: pointer;
   margin-left: 2%;
@@ -439,13 +448,13 @@ section .photo {
   margin-left: auto; }
 
 @media (min-width: 450px) {
-  /* line 338, scss/main.css */
+  /* line 345, scss/main.css */
   .bgClick .closeFormBtn {
     width: 265px;
     height: 50px;
     margin: 50px auto; } }
 
-/* line 342, scss/main.css */
+/* line 349, scss/main.css */
 .bgClick .closeFormBtn p {
   text-shadow: 1px 1px 3px #854900;
   font-size: 17px;
@@ -455,6 +464,6 @@ section .photo {
   letter-spacing: 1px; }
 
 @media (min-width: 450px) {
-  /* line 350, scss/main.css */
+  /* line 357, scss/main.css */
   .bgClick .closeFormBtn p {
     padding-top: calc(50% - 118px); } }

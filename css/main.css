@@ -162,7 +162,7 @@ section .photo {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
-  height: 100vh;
+  height: 90vh;
   position: absolute;
   width: 100vw; }
 
@@ -392,6 +392,41 @@ section .photo {
   color: #ff971f; }
 
 /* line 304, scss/main.css */
+.bgClick .bmiScale {
+  display: none; }
+
+/* line 306, scss/main.css */
+.bgClick .bmiScale h2 {
+  font-size: 25px;
+  font-weight: 600;
+  color: #ff971f;
+  text-align: center;
+  padding: 20px 0; }
+
+@media (min-width: 450px) {
+  /* line 313, scss/main.css */
+  .bgClick .bmiScale h2 {
+    font-size: 25px; } }
+
+/* line 315, scss/main.css */
+.bgClick .bmiScale .list {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 15px;
+  list-style: none; }
+
+/* line 320, scss/main.css */
+.bgClick .bmiScale .list li {
+  text-align: center;
+  list-style: none;
+  font-size: 13px; }
+
+@media (min-width: 450px) {
+  /* line 325, scss/main.css */
+  .bgClick .bmiScale .list li {
+    font-size: 15px; } }
+
+/* line 327, scss/main.css */
 .bgClick .closeFormBtn {
   cursor: pointer;
   margin-left: 2%;
@@ -404,13 +439,13 @@ section .photo {
   margin-left: auto; }
 
 @media (min-width: 450px) {
-  /* line 315, scss/main.css */
+  /* line 338, scss/main.css */
   .bgClick .closeFormBtn {
     width: 265px;
     height: 50px;
     margin: 50px auto; } }
 
-/* line 319, scss/main.css */
+/* line 342, scss/main.css */
 .bgClick .closeFormBtn p {
   text-shadow: 1px 1px 3px #854900;
   font-size: 17px;
@@ -420,6 +455,6 @@ section .photo {
   letter-spacing: 1px; }
 
 @media (min-width: 450px) {
-  /* line 327, scss/main.css */
+  /* line 350, scss/main.css */
   .bgClick .closeFormBtn p {
     padding-top: calc(50% - 118px); } }

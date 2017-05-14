@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const menRadio = form.querySelector('.menRadio');
     const womanRadio = form.querySelector('.womanRadio');
     const bmiBtn = document.querySelector('.bmiBtn');
+    const input = document.querySelectorAll('input');
 
     // gender label
     const genderLabel = form.querySelector('#genderType');
@@ -45,6 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const desc = closeFormBg.querySelector('.description');
     const head = closeFormBg.querySelector('.head');
     const errorText = document.querySelector('.errorLabel');
+    const bmiScale = document.querySelector('.bmiScale');
 
     function init() {
         bmiForm.style.display = 'block';
@@ -53,6 +55,9 @@ document.addEventListener("DOMContentLoaded", function () {
         totalMetaForm.style.display = 'none';
     }
 
+    function resetForm() {
+        form.reset();
+    }
 
     function firstFormShow() {
         bmiForm.style.display = 'block';
@@ -103,61 +108,6 @@ document.addEventListener("DOMContentLoaded", function () {
         return Math.round(n * factor) / factor;
     }
 
-    //    function sendForm(type) {
-    //
-    //        function closeForm() {
-    //            closeFormBg.style.display = "none";
-    //        }
-    //        const closeFormBg = document.createElement('div');
-    //        closeFormBg.className = "bgClick";
-    //
-    //        const photo = document.createElement('div');
-    //        photo.className = "back";
-    //        closeFormBg.appendChild(photo);
-    //
-    //        const finalFormBg = document.createElement('div');
-    //        finalFormBg.className = "formBackground ";
-    //        finalFormBg.className += "finalFormBg";
-    //        closeFormBg.appendChild(finalFormBg);
-    //
-    //        const closeFormBtn = document.createElement('div');
-    //        closeFormBtn.className = "bmiBtn ";
-    //        closeFormBtn.className += "closeFormBtn";
-    //
-    //        const descriptionFormBtn = document.createElement('p');
-    //        const t = document.createTextNode("POWRÓT");
-    //        descriptionFormBtn.appendChild(t);
-    //        closeFormBtn.appendChild(descriptionFormBtn);
-    //
-    //        closeFormBg.appendChild(closeFormBtn);
-    //
-    //        closeFormBtn.addEventListener('click', function () {
-    //            closeForm();
-    //        });
-    //
-    //        function bmiCalc(type) {
-    //
-    //            const label = document.createElement('h2');
-    //            const paragraph = document.createElement('p');
-    //            label.innerText = "Gratulacje!";
-    //            paragraph.innerText = "Twój wskaźnik BMI wynosi: " + roundNumber(b, 2) + ' i oznacza wagę prawidłową!';
-    //
-    //            finalFormBg.appendChild(label);
-    //            finalFormBg.appendChild(paragraph);
-    //        }
-    //
-    //        if ('bmi') {
-    //            bmiCalc();
-    //        } else if ('calories') {
-    //            console.log('cos innego');
-    //        } else {
-    //            console.log('hmm');
-    //        }
-    //
-    //        document.body.appendChild(closeFormBg);
-    //        closeFormBg.style.display = "block";
-    //    }
-
     function bmiFormSend(type) {
         const heightVal = height.value;
         const weightVal = weight.value;
@@ -170,10 +120,10 @@ document.addEventListener("DOMContentLoaded", function () {
         const hei = heightVal * Math.pow(10, -2);
         const mass = weightVal;
         const bmi = mass / Math.pow(hei, 2);
-        console.log(hei, mass);
-        console.log(bmi);
-        //parseInt(bmi);
-        console.log(typeof bmi);
+
+//        console.log(hei, mass);
+//        console.log(bmi);
+//        console.log(typeof bmi);
 
         function bmiLevel() {
             if (bmi < 16) {
@@ -227,6 +177,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         if (menRadio.checked == true || womanRadio.checked == true) {
                             bmiLevel();
                             result.innerText = roundNumber(bmi, 2);
+                            bmiScale.style.display = 'block';
                             closeFormBg.style.display = "block";
                             errorText.innerText = '';
                         } else {
@@ -276,6 +227,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             errorText.innerText = "Wypełnij dane formularza!";
         }
+
     }
 
 
@@ -306,8 +258,11 @@ document.addEventListener("DOMContentLoaded", function () {
         bmiFormSend();
         e.preventDefault();
     });
+
     closeFormBtn.addEventListener('click', function () {
         closeForm();
+        resetForm();
+
     });
 
     init();

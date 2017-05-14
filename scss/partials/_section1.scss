@@ -72,7 +72,7 @@ section {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center top;
-        height: 100vh;
+        height: 90vh;
         position: absolute;
         width: 100vw;
         @media (min-width: 450px) {
@@ -84,8 +84,8 @@ section {
             top: 150px;
             width: 95vw;
         }
-                @media (min-width: 900px) {
-                      left: 45px;
+        @media (min-width: 900px) {
+            left: 45px;
         }
     }
 }
@@ -273,6 +273,33 @@ section {
             }
         }
     }
+    .bmiScale {
+        display: none;
+        h2 {
+            font-size: 25px;
+            font-weight: 600;
+            color: $bgLogoColor;
+            text-align: center;
+            padding: 20px 0;
+            @media (min-width: 450px) {
+                font-size: 25px;
+            }
+        }
+        .list {
+            padding-top: 10px;
+            text-align: center;
+            font-size: 15px;
+            list-style: none;
+            li {
+                text-align: center;
+                list-style: none;
+                font-size: 13px;
+                @media (min-width: 450px) {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
     .closeFormBtn {
         cursor: pointer;
         margin-left: 2%;
@@ -296,9 +323,8 @@ section {
             padding-top: calc(50% - 130px);
             letter-spacing: 1px;
             @media (min-width: 450px) {
-            padding-top: calc(50% - 118px);
+                padding-top: calc(50% - 118px);
             }
-            
         }
     }
 }

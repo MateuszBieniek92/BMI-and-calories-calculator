@@ -80,9 +80,12 @@ section {
         }
         @media (min-width: 900px) {
             margin-top: 0;
-            left: 42px;
+            left: 25px;
             top: 150px;
             width: 95vw;
+        }
+                @media (min-width: 900px) {
+                      left: 45px;
         }
     }
 }
@@ -241,12 +244,61 @@ section {
     background-position: center top;
     .finalFormBg {
         right: 0;
-        top: 150px;
-        width: 600px;
+        top: 85px;
+        width: 90vw;
         height: 500px;
         background: rgba(255, 255, 255, 1);
+        @media (min-width: 450px) {
+            top: 150px;
+            width: 600px;
+        }
+        h2 {
+            font-size: 25px;
+            font-weight: 600;
+            color: $bgLogoColor;
+            text-align: center;
+            padding: 20px 0;
+            @media (min-width: 450px) {
+                font-size: 25px;
+            }
+        }
+        p {
+            font-size: 20px;
+            text-align: center;
+            padding: 20px;
+            span {
+                font-size: 20px;
+                font-weight: 600;
+                color: $bgLogoColor;
+            }
+        }
     }
     .closeFormBtn {
+        cursor: pointer;
+        margin-left: 2%;
+        width: 80vw;
+        height: 50px;
+        background: $bgLogoColor;
+        text-align: center;
+        position: relative;
+        margin: 0px auto;
         margin-left: auto;
+        @media (min-width: 450px) {
+            width: 265px;
+            height: 50px;
+            margin: 50px auto;
+        }
+        p {
+            text-shadow: 1px 1px 3px #854900;
+            font-size: 17px;
+            color: white;
+            font-weight: 600;
+            padding-top: calc(50% - 130px);
+            letter-spacing: 1px;
+            @media (min-width: 450px) {
+            padding-top: calc(50% - 118px);
+            }
+            
+        }
     }
 }

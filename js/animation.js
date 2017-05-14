@@ -38,11 +38,13 @@ document.addEventListener("DOMContentLoaded", function () {
     //close form bg
     const closeFormBg = document.querySelector('.bgClick');
     // close form btn
-    const closeBtn = closeFormBg.querySelector('.closeFormBtn');
+    const closeFormBtn = closeFormBg.querySelector('.closeFormBtn');
 
-
-    console.log(bmiForm, caloriesForm);
-    console.log(navigationChildren);
+    // result spans 
+    const result = closeFormBg.querySelector('.result');
+    const desc = closeFormBg.querySelector('.description');
+    const head = closeFormBg.querySelector('.head');
+    const errorText = document.querySelector('.errorLabel');
 
     function init() {
         bmiForm.style.display = 'block';
@@ -92,31 +94,77 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    function closeForm() {
+        closeFormBg.style.display = "none";
+    }
+
     function roundNumber(n, k) {
         const factor = Math.pow(10, k);
         return Math.round(n * factor) / factor;
     }
 
-    function closeForm() {
-        closeFormBg.style.display = "none";
-    }
+    //    function sendForm(type) {
+    //
+    //        function closeForm() {
+    //            closeFormBg.style.display = "none";
+    //        }
+    //        const closeFormBg = document.createElement('div');
+    //        closeFormBg.className = "bgClick";
+    //
+    //        const photo = document.createElement('div');
+    //        photo.className = "back";
+    //        closeFormBg.appendChild(photo);
+    //
+    //        const finalFormBg = document.createElement('div');
+    //        finalFormBg.className = "formBackground ";
+    //        finalFormBg.className += "finalFormBg";
+    //        closeFormBg.appendChild(finalFormBg);
+    //
+    //        const closeFormBtn = document.createElement('div');
+    //        closeFormBtn.className = "bmiBtn ";
+    //        closeFormBtn.className += "closeFormBtn";
+    //
+    //        const descriptionFormBtn = document.createElement('p');
+    //        const t = document.createTextNode("POWRÓT");
+    //        descriptionFormBtn.appendChild(t);
+    //        closeFormBtn.appendChild(descriptionFormBtn);
+    //
+    //        closeFormBg.appendChild(closeFormBtn);
+    //
+    //        closeFormBtn.addEventListener('click', function () {
+    //            closeForm();
+    //        });
+    //
+    //        function bmiCalc(type) {
+    //
+    //            const label = document.createElement('h2');
+    //            const paragraph = document.createElement('p');
+    //            label.innerText = "Gratulacje!";
+    //            paragraph.innerText = "Twój wskaźnik BMI wynosi: " + roundNumber(b, 2) + ' i oznacza wagę prawidłową!';
+    //
+    //            finalFormBg.appendChild(label);
+    //            finalFormBg.appendChild(paragraph);
+    //        }
+    //
+    //        if ('bmi') {
+    //            bmiCalc();
+    //        } else if ('calories') {
+    //            console.log('cos innego');
+    //        } else {
+    //            console.log('hmm');
+    //        }
+    //
+    //        document.body.appendChild(closeFormBg);
+    //        closeFormBg.style.display = "block";
+    //    }
 
-    function sendForm() {
-        closeFormBg.style.display = "block";
-    }
-
-    function bmiFormSend() {
+    function bmiFormSend(type) {
         const heightVal = height.value;
         const weightVal = weight.value;
         const isNumericHeight = parseInt(heightVal);
         const isNumericWeight = parseInt(weightVal);
 
-        //let sendForm = 'false';
-        const errorText = document.querySelector('.errorLabel');
         errorText.innererrorText = '';
-
-        // console.log(heightVal, weightVal);
-
 
         // bmi parameters
         const hei = heightVal * Math.pow(10, -2);
@@ -124,10 +172,46 @@ document.addEventListener("DOMContentLoaded", function () {
         const bmi = mass / Math.pow(hei, 2);
         console.log(hei, mass);
         console.log(bmi);
+        //parseInt(bmi);
+        console.log(typeof bmi);
+
+        function bmiLevel() {
+            if (bmi < 16) {
+                head.innerText = 'Uwaga!';
+                desc.innerText = 'wygłodzenie';
+                result.style.color = 'red';
+            } else if (16.00 < bmi && bmi < 16.99) {
+                head.innerText = 'Uwaga!';
+                desc.innerText = 'wychudzenie';
+                result.style.color = 'red';
+            } else if (17.00 < bmi && bmi < 18.49) {
+                head.innerText = 'Uwaga!';
+                desc.innerText = 'niedowagę';
+                result.style.color = 'red';
+            } else if (18.50 < bmi && bmi < 24.99) {
+                head.innerText = 'Gratulacje!';
+                desc.innerText = 'wagę prawidłową';
+            } else if (25.00 < bmi && bmi < 29.99) {
+                head.innerText = 'Uwaga!';
+                desc.innerText = 'nadwagę';
+                result.style.color = 'red';
+            } else if (30.00 < bmi && bmi < 34.99) {
+                head.innerText = 'Uwaga!';
+                desc.innerText = 'I stopień otyłości';
+                result.style.color = 'red';
+            } else if (35.00 < bmi && bmi < 39.99) {
+                head.innerText = 'Uwaga!';
+                desc.innerText = 'II stopień otyłości';
+                result.style.color = 'red';
+            } else if (bmi > 40.00) {
+                head.innerText = 'Uwaga!';
+                desc.innerText = 'III stopień otyłości';
+                result.style.color = 'red';
+            }
+        }
 
         heightLabel.style.color = "black";
         genderLabel.style.color = "black";
-        errorText.style.color = "black";
         manLabel.style.color = "black";
         womanLabel.style.color = "black";
         cmLabel.style.color = "black";
@@ -136,15 +220,15 @@ document.addEventListener("DOMContentLoaded", function () {
         kgLabel.style.color = "black";
         weight.style.border = "none";
 
-
         if (heightVal !== "" && weightVal !== "") {
             if (isNumericHeight && isNumericWeight) {
                 if (heightVal.length > 2) {
                     if (weightVal.length > 1) {
                         if (menRadio.checked == true || womanRadio.checked == true) {
-                            //errorText.innerText = 'Twoje BMI wynosi: ' + roundNumber(bmi, 2);
-                            // sendForm = true;
-                            sendForm();
+                            bmiLevel();
+                            result.innerText = roundNumber(bmi, 2);
+                            closeFormBg.style.display = "block";
+                            errorText.innerText = '';
                         } else {
                             errorText.innerText = "Zaznacz płeć!"
                             genderLabel.style.color = "red";
@@ -190,10 +274,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 kgLabel.style.color = "red";
                 weight.style.border = "2px solid red";
             }
-            errorText.innerText = "Wypełnij dane formularza!"
+            errorText.innerText = "Wypełnij dane formularza!";
         }
-        console.log(height);
     }
+
 
     // CLICK EVENTS    
 
@@ -222,10 +306,9 @@ document.addEventListener("DOMContentLoaded", function () {
         bmiFormSend();
         e.preventDefault();
     });
-    closeBtn.addEventListener('click', function () {
+    closeFormBtn.addEventListener('click', function () {
         closeForm();
     });
-
 
     init();
 

@@ -268,7 +268,7 @@ section .photo {
 .totalMetabolism .bmForm .methodOption,
 .totalMetabolism .tmForm .methodOption {
   height: 35px;
-  margin: 20px 0 0px 20px; }
+  margin: 20px 0 0px 40px; }
 
 /* line 213, scss/main.css */
 .bmi .bmiForm .activity,

@@ -303,8 +303,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const isNumericHeight = parseInt(heightVal);
         const isNumericWeight = parseInt(weightVal);
 
-        errorLabelBasicMeta.innererrorText = '';
-
         function benedictHarris() {
             var ppm;
             if (womanBasicMeta.checked) {
@@ -325,6 +323,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return ppm;
         }
 
+        errorLabelBasicMeta.innererrorText = '';
         gender.style.color = "black";
         genderWoman.style.color = "black";
         genderMan.style.color = "black";
@@ -340,28 +339,71 @@ document.addEventListener("DOMContentLoaded", function () {
         heightInputBasicMeta.style.border = "none";
         weightInputBasicMeta.style.border = "none";
 
-        //        if (oldInput !== "" &&  heightInputBasicMeta !== "" &&  weightInputBasicMeta !== "") {
-        //            
-        //        }
+        if (oldVal !== "" && heightVal !== "" && weightVal !== "") {
+            ///dalej
+            if (methodOne.selected) {
+                benedictHarris();
+                console.log(benedictHarris());
+            } else if (methodTwo.selected) {
+                mifflinJeor()
+                console.log(mifflinJeor());
+            }
+            errorLabelBasicMeta.innererrorText = '';
+        } else {
+            if (oldVal !== "" && heightVal == "" && weightVal == "") {
+                heightBasicMeta.style.color = "red";
+                cmUnitBasicMeta.style.color = "red";
+                heightInputBasicMeta.style.border = "2px solid red";
+                weightBasicMeta.style.color = "red";
+                kgUnitBasicMeta.style.color = "red";
+                weightInputBasicMeta.style.border = "2px solid red";
+            } else if (heightVal !== "" && oldVal == "" && weightVal == "") {
+                oldLabel.style.color = "red";
+                oldUnit.style.color = "red";
+                oldInput.style.border = "2px solid red";
+                weightBasicMeta.style.color = "red";
+                kgUnitBasicMeta.style.color = "red";
+                weightInputBasicMeta.style.border = "2px solid red";
+            } else if (weightVal !== "" && heightVal == "" && oldVal == "") {
+                oldLabel.style.color = "red";
+                oldUnit.style.color = "red";
+                oldInput.style.border = "2px solid red";
+                heightBasicMeta.style.color = "red";
+                cmUnitBasicMeta.style.color = "red";
+                heightInputBasicMeta.style.border = "2px solid red";
+            } else {
+                oldLabel.style.color = "red";
+                oldUnit.style.color = "red";
+                oldInput.style.border = "2px solid red";
+                heightBasicMeta.style.color = "red";
+                cmUnitBasicMeta.style.color = "red";
+                heightInputBasicMeta.style.border = "2px solid red";
+                weightBasicMeta.style.color = "red";
+                kgUnitBasicMeta.style.color = "red";
+                weightInputBasicMeta.style.border = "2px solid red";
+            }
+            errorLabelBasicMeta.style.color = "red";
+            errorLabelBasicMeta.innerText = "Wypełnij dane formularza!";
+        }
 
 
 
 
         /// selected method
-        if (methodOne.selected) {
-            benedictHarris();
-            console.log(benedictHarris());
-        } else if (methodTwo.selected) {
-            mifflinJeor()
-            console.log(mifflinJeor());
-        } 
+        //        if (methodOne.selected) {
+        //            benedictHarris();
+        //            console.log(benedictHarris());
+        //        } else if (methodTwo.selected) {
+        //            mifflinJeor()
+        //            console.log(mifflinJeor());
+        //        }
     }
 
-        caloriesBtn.addEventListener('click', function (e) {
+    caloriesBtn.addEventListener('click', function (e) {
         basicMetabolismFormSend();
         e.preventDefault();
     });
-    
-    
+
+
     init();
 });

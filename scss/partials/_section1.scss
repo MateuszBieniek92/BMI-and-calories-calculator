@@ -71,12 +71,12 @@ section {
         background-image: url(../photos/background_photo.png);
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: center top;
-        height: 90vh;
+        background-position: center; //top;
+        height: 115vh;
         position: absolute;
         width: 100vw;
         @media (min-width: 450px) {
-            height: 150vh;
+            height: 95vh;
         }
         @media (min-width: 900px) {
             height: 80vh;
@@ -121,7 +121,8 @@ section {
     }
 }
 
-.basicMetabolism {
+.basicMetabolism,
+.totalMetabolism {
     height: 600px;
 }
 
@@ -151,6 +152,14 @@ section {
         .methodOption {
             height: 35px;
             margin: 20px 0 0px 20px;
+        }
+        .activity {
+            width: 320px;
+            height: 35px;
+            margin: 20px 0 0px 10px;
+            @media (min-width: 450px) {
+                margin: 20px 0 0px 15px;
+            }
         }
         .gender {
             width: 30px;
@@ -195,7 +204,8 @@ section {
 }
 
 .bmiBtn,
-.caloriesBtn {
+.caloriesBtn,
+.totalMetabolismBtn {
     cursor: pointer;
     margin-left: 2%;
     width: 90vw;
@@ -228,7 +238,8 @@ section {
     }
 }
 
-.caloriesBtn {
+.caloriesBtn,
+.totalMetabolismBtn {
     margin: 20px auto;
     p {
         margin: 20px auto;
@@ -236,7 +247,8 @@ section {
 }
 
 .bmiBtn:hover,
-.caloriesBtn:hover {
+.caloriesBtn:hover,
+.totalMetabolismBtn:hover {
     background: #ffaf5e;
     background-image: linear-gradient(to bottom, #ffaf5e, #ff8400);
     text-decoration: none;

@@ -59,6 +59,14 @@
             <div class="formBackground basicMetabolism">
                 <p>Oblicz swoją <span>podstawową</span> przemianę materii</p>
                 <form class="bmForm">
+                     <label id="kgUnit">Wybierz metodę:</label>
+                    <br>
+                    <select class="methodOption">
+                        <option>metoda Harrisa-Benedicta</option>
+                        <option>metoda MD Mifflin'a oraz ST St Jeor'a</option>
+                        <option>metoda The Katch-McArdle Formula (RMR)</option>
+                    </select>
+                    <br>
                     <label id="genderType">Płeć:</label>
                     <input type="radio" name="Radio" value="1" class="womanRadio" placeholder=" ">
                     <label class="gender" id="genderWoman">K</label>
@@ -66,7 +74,7 @@
                     <label class="gender" id="genderMan">M</label>
                     <br>
                     <label id="heightLabel">Wiek:</label>
-                    <input type="text" class="firstInputBmi old" id="height" name="old" placeholder="">
+                    <input type="text" class="thirdInputBmi old" id="height" name="old" placeholder="">
                     <label id="oldUnit">(18-99)</label>
                     <br>
                     <label id="heightLabel">Wzrost:</label>
@@ -77,19 +85,11 @@
                     <input type="text" class="secondInputBmi" id="weight" name="weight" placeholder=" ">
                     <label id="kgUnit">kg</label>
                     <br>
-                    <label id="kgUnit">Poziom aktywności fizycznej: </label>
-                    <select>
-                        <option value="zeroActyvity">Brak aktywności fizycznej</option>
-                        <option value="smallActyvity">Mała aktywność fizyczna (1-3 razy tygodniowo)</option>
-                        <option value="mediumActyvity">Średnia aktywność fizyczna (3-5 razy tygodniowo)</option>
-                        <option value="bigActyvity">Duża aktywność fizyczna (codziennie)</option>
-                        <option value="veryBigActyvity">Bardzo duża aktywność fizyczna (codziennie)</option>
-                    </select>
-
                     <label class="errorLabel"></label>
                 </form>
                 <div class="caloriesBtn" type="button">
                     <p>OBLICZ!</p>
+                    
                 </div>
             </div>
             <div class="formBackground totalMetabolism">
@@ -134,7 +134,7 @@
             <div class="back"></div>
             <div class="formBackground finalFormBg">
                 <h2 class="head">Gratulacje!</h2>
-                <p>Twój wskaźnik BMI wynosi:<span class="result">BMI</span> i oznacza <span class="
+                <p>Twój wskaźnik BMI wynosi: <span class="result">BMI</span> i oznacza <span class="
                     description"></span>!</p>
                 <div class="bmiScale">
                     <h2>Zakresy wartości BMI</h2>

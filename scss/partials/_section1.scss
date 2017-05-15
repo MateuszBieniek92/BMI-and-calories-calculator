@@ -114,13 +114,20 @@ section {
         right: 400px;
     }
 }
+
 .calories {
-        @media (min-width: 1200px) {
+    @media (min-width: 1200px) {
         width: 400px;
     }
 }
 
-.bmi, .basicMetabolism, .totalMetabolism {
+.basicMetabolism {
+    height: 600px;
+}
+
+.bmi,
+.basicMetabolism,
+.totalMetabolism {
     p {
         padding-top: 25px;
         font-size: 25px;
@@ -132,13 +139,18 @@ section {
             font-weight: 600;
         }
     }
-
-    .bmiForm, .bmForm, .tmForm{
+    .bmiForm,
+    .bmForm,
+    .tmForm {
         label {
-            font-size: 20px;
+            font-size: 18px;
             margin: 0px 30px 0 10px;
             top: 2px;
             position: relative;
+        }
+        .methodOption {
+            height: 35px;
+            margin: 20px 0 0px 20px;
         }
         .gender {
             width: 30px;
@@ -152,11 +164,20 @@ section {
         .old {
             margin: 20px 0 20px -10px;
         }
+        #oldUnit {
+            font-size: 16px;
+            @media (min-width: 1200px) {
+                font-size: 18px;
+            }
+        }
         .firstInputBmi {
             margin: 20px 0 20px -10px;
         }
         .secondInputBmi {
             margin: 20px 0 20px 0px;
+        }
+        .thirdInputBmi {
+            margin: 20px 0 20px 6px;
         }
         input[type='radio'] {
             width: 30px;
@@ -173,7 +194,8 @@ section {
     }
 }
 
-.bmiBtn, .caloriesBtn {
+.bmiBtn,
+.caloriesBtn {
     cursor: pointer;
     margin-left: 2%;
     width: 90vw;
@@ -206,7 +228,15 @@ section {
     }
 }
 
-.bmiBtn:hover, .caloriesBtn:hover {
+.caloriesBtn {
+    margin: 20px auto;
+    p {
+        margin: 20px auto;
+    }
+}
+
+.bmiBtn:hover,
+.caloriesBtn:hover {
     background: #ffaf5e;
     background-image: linear-gradient(to bottom, #ffaf5e, #ff8400);
     text-decoration: none;

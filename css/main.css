@@ -221,64 +221,187 @@ section .photo {
     width: 400px; } }
 
 /* line 169, scss/main.css */
-.bmi p, .basicMetabolism p, .totalMetabolism p {
+.basicMetabolism {
+  height: 600px; }
+
+/* line 172, scss/main.css */
+.bmi p,
+.basicMetabolism p,
+.totalMetabolism p {
   padding-top: 25px;
   font-size: 25px;
   margin: 25px 0;
   text-align: center;
   font-weight: 500; }
 
-/* line 175, scss/main.css */
-.bmi p span, .basicMetabolism p span, .totalMetabolism p span {
+/* line 180, scss/main.css */
+.bmi p span,
+.basicMetabolism p span,
+.totalMetabolism p span {
   font-size: 27px;
   font-weight: 600; }
 
-/* line 179, scss/main.css */
-.bmi .bmiForm label, .bmi .bmForm label, .bmi .tmForm label, .basicMetabolism .bmiForm label, .basicMetabolism .bmForm label, .basicMetabolism .tmForm label, .totalMetabolism .bmiForm label, .totalMetabolism .bmForm label, .totalMetabolism .tmForm label {
-  font-size: 20px;
+/* line 186, scss/main.css */
+.bmi .bmiForm label,
+.bmi .bmForm label,
+.bmi .tmForm label,
+.basicMetabolism .bmiForm label,
+.basicMetabolism .bmForm label,
+.basicMetabolism .tmForm label,
+.totalMetabolism .bmiForm label,
+.totalMetabolism .bmForm label,
+.totalMetabolism .tmForm label {
+  font-size: 18px;
   margin: 0px 30px 0 10px;
   top: 2px;
   position: relative; }
 
-/* line 185, scss/main.css */
-.bmi .bmiForm .gender, .bmi .bmForm .gender, .bmi .tmForm .gender, .basicMetabolism .bmiForm .gender, .basicMetabolism .bmForm .gender, .basicMetabolism .tmForm .gender, .totalMetabolism .bmiForm .gender, .totalMetabolism .bmForm .gender, .totalMetabolism .tmForm .gender {
+/* line 200, scss/main.css */
+.bmi .bmiForm .methodOption,
+.bmi .bmForm .methodOption,
+.bmi .tmForm .methodOption,
+.basicMetabolism .bmiForm .methodOption,
+.basicMetabolism .bmForm .methodOption,
+.basicMetabolism .tmForm .methodOption,
+.totalMetabolism .bmiForm .methodOption,
+.totalMetabolism .bmForm .methodOption,
+.totalMetabolism .tmForm .methodOption {
+  height: 35px;
+  margin: 20px 0 0px 20px; }
+
+/* line 212, scss/main.css */
+.bmi .bmiForm .gender,
+.bmi .bmForm .gender,
+.bmi .tmForm .gender,
+.basicMetabolism .bmiForm .gender,
+.basicMetabolism .bmForm .gender,
+.basicMetabolism .tmForm .gender,
+.totalMetabolism .bmiForm .gender,
+.totalMetabolism .bmForm .gender,
+.totalMetabolism .tmForm .gender {
   width: 30px;
   height: 30px;
   margin: 20px 0 20px 15px; }
 
-/* line 190, scss/main.css */
-.bmi .bmiForm input[type='text'], .bmi .bmForm input[type='text'], .bmi .tmForm input[type='text'], .basicMetabolism .bmiForm input[type='text'], .basicMetabolism .bmForm input[type='text'], .basicMetabolism .tmForm input[type='text'], .totalMetabolism .bmiForm input[type='text'], .totalMetabolism .bmForm input[type='text'], .totalMetabolism .tmForm input[type='text'] {
+/* line 225, scss/main.css */
+.bmi .bmiForm input[type='text'],
+.bmi .bmForm input[type='text'],
+.bmi .tmForm input[type='text'],
+.basicMetabolism .bmiForm input[type='text'],
+.basicMetabolism .bmForm input[type='text'],
+.basicMetabolism .tmForm input[type='text'],
+.totalMetabolism .bmiForm input[type='text'],
+.totalMetabolism .bmForm input[type='text'],
+.totalMetabolism .tmForm input[type='text'] {
   height: 35px;
   width: 150px; }
 
-/* line 194, scss/main.css */
-.bmi .bmiForm .old, .bmi .bmForm .old, .bmi .tmForm .old, .basicMetabolism .bmiForm .old, .basicMetabolism .bmForm .old, .basicMetabolism .tmForm .old, .totalMetabolism .bmiForm .old, .totalMetabolism .bmForm .old, .totalMetabolism .tmForm .old {
+/* line 237, scss/main.css */
+.bmi .bmiForm .old,
+.bmi .bmForm .old,
+.bmi .tmForm .old,
+.basicMetabolism .bmiForm .old,
+.basicMetabolism .bmForm .old,
+.basicMetabolism .tmForm .old,
+.totalMetabolism .bmiForm .old,
+.totalMetabolism .bmForm .old,
+.totalMetabolism .tmForm .old {
   margin: 20px 0 20px -10px; }
 
-/* line 197, scss/main.css */
-.bmi .bmiForm .firstInputBmi, .bmi .bmForm .firstInputBmi, .bmi .tmForm .firstInputBmi, .basicMetabolism .bmiForm .firstInputBmi, .basicMetabolism .bmForm .firstInputBmi, .basicMetabolism .tmForm .firstInputBmi, .totalMetabolism .bmiForm .firstInputBmi, .totalMetabolism .bmForm .firstInputBmi, .totalMetabolism .tmForm .firstInputBmi {
+/* line 248, scss/main.css */
+.bmi .bmiForm #oldUnit,
+.bmi .bmForm #oldUnit,
+.bmi .tmForm #oldUnit,
+.basicMetabolism .bmiForm #oldUnit,
+.basicMetabolism .bmForm #oldUnit,
+.basicMetabolism .tmForm #oldUnit,
+.totalMetabolism .bmiForm #oldUnit,
+.totalMetabolism .bmForm #oldUnit,
+.totalMetabolism .tmForm #oldUnit {
+  font-size: 16px; }
+
+@media (min-width: 1200px) {
+  /* line 259, scss/main.css */
+  .bmi .bmiForm #oldUnit,
+  .bmi .bmForm #oldUnit,
+  .bmi .tmForm #oldUnit,
+  .basicMetabolism .bmiForm #oldUnit,
+  .basicMetabolism .bmForm #oldUnit,
+  .basicMetabolism .tmForm #oldUnit,
+  .totalMetabolism .bmiForm #oldUnit,
+  .totalMetabolism .bmForm #oldUnit,
+  .totalMetabolism .tmForm #oldUnit {
+    font-size: 18px; } }
+
+/* line 270, scss/main.css */
+.bmi .bmiForm .firstInputBmi,
+.bmi .bmForm .firstInputBmi,
+.bmi .tmForm .firstInputBmi,
+.basicMetabolism .bmiForm .firstInputBmi,
+.basicMetabolism .bmForm .firstInputBmi,
+.basicMetabolism .tmForm .firstInputBmi,
+.totalMetabolism .bmiForm .firstInputBmi,
+.totalMetabolism .bmForm .firstInputBmi,
+.totalMetabolism .tmForm .firstInputBmi {
   margin: 20px 0 20px -10px; }
 
-/* line 200, scss/main.css */
-.bmi .bmiForm .secondInputBmi, .bmi .bmForm .secondInputBmi, .bmi .tmForm .secondInputBmi, .basicMetabolism .bmiForm .secondInputBmi, .basicMetabolism .bmForm .secondInputBmi, .basicMetabolism .tmForm .secondInputBmi, .totalMetabolism .bmiForm .secondInputBmi, .totalMetabolism .bmForm .secondInputBmi, .totalMetabolism .tmForm .secondInputBmi {
+/* line 281, scss/main.css */
+.bmi .bmiForm .secondInputBmi,
+.bmi .bmForm .secondInputBmi,
+.bmi .tmForm .secondInputBmi,
+.basicMetabolism .bmiForm .secondInputBmi,
+.basicMetabolism .bmForm .secondInputBmi,
+.basicMetabolism .tmForm .secondInputBmi,
+.totalMetabolism .bmiForm .secondInputBmi,
+.totalMetabolism .bmForm .secondInputBmi,
+.totalMetabolism .tmForm .secondInputBmi {
   margin: 20px 0 20px 0px; }
 
-/* line 203, scss/main.css */
-.bmi .bmiForm input[type='radio'], .bmi .bmForm input[type='radio'], .bmi .tmForm input[type='radio'], .basicMetabolism .bmiForm input[type='radio'], .basicMetabolism .bmForm input[type='radio'], .basicMetabolism .tmForm input[type='radio'], .totalMetabolism .bmiForm input[type='radio'], .totalMetabolism .bmForm input[type='radio'], .totalMetabolism .tmForm input[type='radio'] {
+/* line 292, scss/main.css */
+.bmi .bmiForm .thirdInputBmi,
+.bmi .bmForm .thirdInputBmi,
+.bmi .tmForm .thirdInputBmi,
+.basicMetabolism .bmiForm .thirdInputBmi,
+.basicMetabolism .bmForm .thirdInputBmi,
+.basicMetabolism .tmForm .thirdInputBmi,
+.totalMetabolism .bmiForm .thirdInputBmi,
+.totalMetabolism .bmForm .thirdInputBmi,
+.totalMetabolism .tmForm .thirdInputBmi {
+  margin: 20px 0 20px 6px; }
+
+/* line 303, scss/main.css */
+.bmi .bmiForm input[type='radio'],
+.bmi .bmForm input[type='radio'],
+.bmi .tmForm input[type='radio'],
+.basicMetabolism .bmiForm input[type='radio'],
+.basicMetabolism .bmForm input[type='radio'],
+.basicMetabolism .tmForm input[type='radio'],
+.totalMetabolism .bmiForm input[type='radio'],
+.totalMetabolism .bmForm input[type='radio'],
+.totalMetabolism .tmForm input[type='radio'] {
   width: 30px;
   height: 30px;
   margin: 20px 0 20px 15px;
   position: relative;
   top: 9px; }
 
-/* line 210, scss/main.css */
-.bmi .bmiForm .errorLabel, .bmi .bmForm .errorLabel, .bmi .tmForm .errorLabel, .basicMetabolism .bmiForm .errorLabel, .basicMetabolism .bmForm .errorLabel, .basicMetabolism .tmForm .errorLabel, .totalMetabolism .bmiForm .errorLabel, .totalMetabolism .bmForm .errorLabel, .totalMetabolism .tmForm .errorLabel {
+/* line 318, scss/main.css */
+.bmi .bmiForm .errorLabel,
+.bmi .bmForm .errorLabel,
+.bmi .tmForm .errorLabel,
+.basicMetabolism .bmiForm .errorLabel,
+.basicMetabolism .bmForm .errorLabel,
+.basicMetabolism .tmForm .errorLabel,
+.totalMetabolism .bmiForm .errorLabel,
+.totalMetabolism .bmForm .errorLabel,
+.totalMetabolism .tmForm .errorLabel {
   font-size: 16px;
   font-weight: 500;
   color: red; }
 
-/* line 215, scss/main.css */
-.bmiBtn, .caloriesBtn {
+/* line 331, scss/main.css */
+.bmiBtn,
+.caloriesBtn {
   cursor: pointer;
   margin-left: 2%;
   width: 90vw;
@@ -289,8 +412,9 @@ section .photo {
   margin: 50px auto; }
 
 @media (min-width: 450px) {
-  /* line 225, scss/main.css */
-  .bmiBtn, .caloriesBtn {
+  /* line 342, scss/main.css */
+  .bmiBtn,
+  .caloriesBtn {
     margin: 85px auto;
     margin-left: 11%;
     width: 265px;
@@ -299,8 +423,9 @@ section .photo {
     text-align: center;
     position: relative; } }
 
-/* line 233, scss/main.css */
-.bmiBtn p, .caloriesBtn p {
+/* line 351, scss/main.css */
+.bmiBtn p,
+.caloriesBtn p {
   text-shadow: 1px 1px 3px #854900;
   font-size: 17px;
   color: white;
@@ -309,18 +434,28 @@ section .photo {
   letter-spacing: 1px; }
 
 @media (min-width: 450px) {
-  /* line 241, scss/main.css */
-  .bmiBtn p, .caloriesBtn p {
+  /* line 360, scss/main.css */
+  .bmiBtn p,
+  .caloriesBtn p {
     padding-top: calc(50% - 118px);
     margin: 85px auto; } }
 
-/* line 245, scss/main.css */
-.bmiBtn:hover, .caloriesBtn:hover {
+/* line 365, scss/main.css */
+.caloriesBtn {
+  margin: 20px auto; }
+
+/* line 367, scss/main.css */
+.caloriesBtn p {
+  margin: 20px auto; }
+
+/* line 370, scss/main.css */
+.bmiBtn:hover,
+.caloriesBtn:hover {
   background: #ffaf5e;
   background-image: linear-gradient(to bottom, #ffaf5e, #ff8400);
   text-decoration: none; }
 
-/* line 250, scss/main.css */
+/* line 376, scss/main.css */
 .bar1,
 .bar2,
 .bar3 {
@@ -330,25 +465,25 @@ section .photo {
   margin: 6px 0;
   transition: 0.4s; }
 
-/* line 259, scss/main.css */
+/* line 385, scss/main.css */
 .change .bar1 {
   -webkit-transform: rotate(-45deg) translate(-9px, 6px);
   transform: rotate(-45deg) translate(-9px, 6px); }
 
-/* line 263, scss/main.css */
+/* line 389, scss/main.css */
 .change .bar2 {
   opacity: 0; }
 
-/* line 266, scss/main.css */
+/* line 392, scss/main.css */
 .change .bar3 {
   -webkit-transform: rotate(45deg) translate(-8px, -8px);
   transform: rotate(45deg) translate(-8px, -8px); }
 
-/* line 270, scss/main.css */
+/* line 396, scss/main.css */
 .visible {
   display: none; }
 
-/* line 273, scss/main.css */
+/* line 399, scss/main.css */
 .bgClick {
   display: none;
   width: 100vw;
@@ -362,7 +497,7 @@ section .photo {
   background-repeat: no-repeat;
   background-position: center top; }
 
-/* line 285, scss/main.css */
+/* line 411, scss/main.css */
 .bgClick .finalFormBg {
   right: 0;
   top: 85px;
@@ -371,12 +506,12 @@ section .photo {
   background: white; }
 
 @media (min-width: 450px) {
-  /* line 292, scss/main.css */
+  /* line 418, scss/main.css */
   .bgClick .finalFormBg {
     top: 150px;
     width: 600px; } }
 
-/* line 295, scss/main.css */
+/* line 421, scss/main.css */
 .bgClick .finalFormBg h2 {
   font-size: 25px;
   font-weight: 600;
@@ -385,27 +520,27 @@ section .photo {
   padding: 20px 0; }
 
 @media (min-width: 450px) {
-  /* line 302, scss/main.css */
+  /* line 428, scss/main.css */
   .bgClick .finalFormBg h2 {
     font-size: 25px; } }
 
-/* line 304, scss/main.css */
+/* line 430, scss/main.css */
 .bgClick .finalFormBg p {
   font-size: 20px;
   text-align: center;
   padding: 20px; }
 
-/* line 308, scss/main.css */
+/* line 434, scss/main.css */
 .bgClick .finalFormBg p span {
   font-size: 20px;
   font-weight: 600;
   color: #ff971f; }
 
-/* line 312, scss/main.css */
+/* line 438, scss/main.css */
 .bgClick .bmiScale {
   display: none; }
 
-/* line 314, scss/main.css */
+/* line 440, scss/main.css */
 .bgClick .bmiScale h2 {
   font-size: 25px;
   font-weight: 600;
@@ -414,29 +549,29 @@ section .photo {
   padding: 20px 0; }
 
 @media (min-width: 450px) {
-  /* line 321, scss/main.css */
+  /* line 447, scss/main.css */
   .bgClick .bmiScale h2 {
     font-size: 25px; } }
 
-/* line 323, scss/main.css */
+/* line 449, scss/main.css */
 .bgClick .bmiScale .list {
   padding-top: 10px;
   text-align: center;
   font-size: 15px;
   list-style: none; }
 
-/* line 328, scss/main.css */
+/* line 454, scss/main.css */
 .bgClick .bmiScale .list li {
   text-align: center;
   list-style: none;
   font-size: 13px; }
 
 @media (min-width: 450px) {
-  /* line 333, scss/main.css */
+  /* line 459, scss/main.css */
   .bgClick .bmiScale .list li {
     font-size: 15px; } }
 
-/* line 335, scss/main.css */
+/* line 461, scss/main.css */
 .bgClick .closeFormBtn {
   cursor: pointer;
   margin-left: 2%;
@@ -449,13 +584,13 @@ section .photo {
   margin-left: auto; }
 
 @media (min-width: 450px) {
-  /* line 346, scss/main.css */
+  /* line 472, scss/main.css */
   .bgClick .closeFormBtn {
     width: 265px;
     height: 50px;
     margin: 50px auto; } }
 
-/* line 350, scss/main.css */
+/* line 476, scss/main.css */
 .bgClick .closeFormBtn p {
   text-shadow: 1px 1px 3px #854900;
   font-size: 17px;
@@ -465,6 +600,6 @@ section .photo {
   letter-spacing: 1px; }
 
 @media (min-width: 450px) {
-  /* line 358, scss/main.css */
+  /* line 484, scss/main.css */
   .bgClick .closeFormBtn p {
     padding-top: calc(50% - 118px); } }

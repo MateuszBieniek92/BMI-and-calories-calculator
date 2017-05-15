@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+    // FORM 1 - BMI CALCULATOR
     // menu btns
     const bmiForm = document.querySelector('.bmi');
     const caloriesForm = document.querySelector('.calories');
@@ -109,9 +110,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const mass = weightVal;
         const bmi = mass / Math.pow(hei, 2);
 
-//        console.log(hei, mass);
-//        console.log(bmi);
-//        console.log(typeof bmi);
+        //        console.log(hei, mass);
+        //        console.log(bmi);
+        //        console.log(typeof bmi);
 
         function bmiLevel() {
             if (bmi < 16) {
@@ -218,7 +219,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
-
     // CLICK EVENTS    
 
     firstMenuBtn.addEventListener('click', function () {
@@ -246,10 +246,104 @@ document.addEventListener("DOMContentLoaded", function () {
     closeFormBtn.addEventListener('click', function () {
         closeForm();
         resetForm();
-
     });
 
+
+    // FORM 2 - BASIC METABOLISM CALCULATOR
+
+    //const basicMetaForm = document.querySelector('.basicMetabolism');
+
+    const bmForm = basicMetaForm.querySelector('.bmForm');
+
+    //option 
+    const methodOption = bmForm.querySelector('.methodOption');
+    const methodOne = methodOption.children[0];
+    const methodTwo = methodOption.children[1];
+    const methodThree = methodOption.children[2];
+
+    //gender labels
+    const gender = bmForm.querySelector('#genderType');
+    const genderWoman = bmForm.querySelector('#genderWoman');
+    const genderMan = bmForm.querySelector('#genderMan');
+
+    //old labels and input
+    const oldLabel = bmForm.querySelector('#oldLabel');
+    const oldInput = bmForm.querySelector('.thirdInputBmi');
+    const oldUnit = bmForm.querySelector('#oldUnit');
+
+    //height labels and unit
+
+    const heightBasicMeta = bmForm.querySelector('#heightLabel');
+    const heightInputBasicMeta = bmForm.querySelector('.firstInputBmi');
+    const cmUnitBasicMeta = bmForm.querySelector('#cmUnit');
+
+    //weight labels and unit
+
+    const weightBasicMeta = bmForm.querySelector('#weightLabel');
+    const weightInputBasicMeta = bmForm.querySelector('.secondInputBmi');
+    const kgUnitBasicMeta = bmForm.querySelector('#kgUnit');
+
+    // error btn
+
+    const errorLabelBasicMeta = bmForm.querySelector('.errorLabel');
+    // submit Basic Meta btn
+    const caloriesBtn = basicMetaForm.querySelector('.caloriesBtn');
+
+
+    function basicMetabolismFormSend(type) {
+        const oldVal = oldInput.value;
+        const heightVal = heightInputBasicMeta.value;
+        const weightVal = weightInputBasicMeta.value;
+        const isNumericOld = parseInt(oldVal);
+        const isNumericHeight = parseInt(heightVal);
+        const isNumericWeight = parseInt(weightVal);
+
+        errorLabelBasicMeta.innererrorText = '';
+
+        gender.style.color = "black";
+        genderWoman.style.color = "black";
+        genderMan.style.color = "black";
+        oldLabel.style.color = "black";
+        oldUnit.style.color = "black";
+        heightBasicMeta.style.color = "black";
+        cmUnitBasicMeta.style.color = "black";
+        weightBasicMeta.style.color = "black";
+        kgUnitBasicMeta.style.color = "black";
+        errorLabelBasicMeta.style.color = "black";
+        
+        oldInput.style.border = "none";
+        heightInputBasicMeta.style.border = "none";
+        weightInputBasicMeta.style.border = "none";
+
+        if (oldInput !== "" &&  heightInputBasicMeta !== "" &&  weightInputBasicMeta !== "") {
+            
+        }
+
+            
+            
+            
+            
+            
+            
+            
+            
+
+    }
+
+    caloriesBtn.addEventListener('click', function (e) {
+        basicMetabolismFormSend();
+        e.preventDefault();
+    });
+
+
+
+
+
+
+
+
+
+    console.log(gender, genderWoman, genderMan);
+
     init();
-
-
 });

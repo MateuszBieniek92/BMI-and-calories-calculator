@@ -2,9 +2,9 @@
 
  One page website presenting four calculators: BMI, calories, basic metabolism and total metabolism.
  
- BMI calculator - done_
- Calories calculator - In progress... :)_
- Basic metabolism calculator - In progress... :)_
+ BMI calculator - done <br>
+ Calories calculator - In progress... :) <br>
+ Basic metabolism calculator - In progress... :) <br>
  Basic metabolism calculator - In progress... :)
  
 ## Used technologies: 

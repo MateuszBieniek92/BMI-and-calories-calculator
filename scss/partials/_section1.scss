@@ -76,9 +76,10 @@ section {
         position: absolute;
         width: 100vw;
         @media (min-width: 450px) {
-            height: 80vh;
+            height: 150vh;
         }
         @media (min-width: 900px) {
+            height: 80vh;
             margin-top: 0;
             left: 25px;
             top: 150px;
@@ -119,7 +120,7 @@ section {
     }
 }
 
-.bmi, .calories {
+.bmi, .basicMetabolism, .totalMetabolism {
     p {
         padding-top: 25px;
         font-size: 25px;
@@ -132,7 +133,7 @@ section {
         }
     }
 
-    .bmiForm, .caloriesForm {
+    .bmiForm, .bmForm, .tmForm{
         label {
             font-size: 20px;
             margin: 0px 30px 0 10px;

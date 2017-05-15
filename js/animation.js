@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const firstMenuBtn = document.querySelector('.btnOne');
     const secondMenuBtn = document.querySelector('.btnTwo');
     const thirdMenuBtn = document.querySelector('.btnThree');
-    const fourthMenuBtn = document.querySelector('.btnFour');
 
     const hamburgerBtn = document.querySelector('.hamburger');
     const navigation = document.querySelector('.navigation');
@@ -50,7 +49,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function init() {
         bmiForm.style.display = 'block';
-        caloriesForm.style.display = 'none';
         basicMetaForm.style.display = 'none';
         totalMetaForm.style.display = 'none';
     }
@@ -61,28 +59,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function firstFormShow() {
         bmiForm.style.display = 'block';
-        caloriesForm.style.display = 'none';
         basicMetaForm.style.display = 'none';
         totalMetaForm.style.display = 'none';
     }
 
     function secondFormShow() {
         bmiForm.style.display = 'none';
-        caloriesForm.style.display = 'block';
-        basicMetaForm.style.display = 'none';
+        basicMetaForm.style.display = 'block';
         totalMetaForm.style.display = 'none';
     }
 
     function thirdFormShow() {
         bmiForm.style.display = 'none';
-        caloriesForm.style.display = 'none';
-        basicMetaForm.style.display = 'block';
-        totalMetaForm.style.display = 'none';
-    }
-
-    function fourthFormShow() {
-        bmiForm.style.display = 'none';
-        caloriesForm.style.display = 'none';
         basicMetaForm.style.display = 'none';
         totalMetaForm.style.display = 'block';
     }
@@ -243,10 +231,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     thirdMenuBtn.addEventListener('click', function () {
         thirdFormShow();
-    });
-
-    fourthMenuBtn.addEventListener('click', function () {
-        fourthFormShow();
     });
 
     hamburgerBtn.addEventListener('click', function () {

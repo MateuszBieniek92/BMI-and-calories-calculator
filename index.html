@@ -16,9 +16,8 @@
             <nav>
                 <ul class="navigation">
                     <li class="btnOne"><a>Kalkulator BMI</a></li>
-                    <li class="btnTwo"><a>Kalkulator kalorii</a></li>
-                    <li class="btnThree"><a>Postawowa przemiana materii</a></li>
-                    <li class="btnFour"><a>Całkowita przemiana materii</a></li>
+                    <li class="btnTwo"><a>Postawowa przemiana materii</a></li>
+                    <li class="btnThree"><a>Całkowita przemiana materii</a></li>
                 </ul>
             </nav>
 
@@ -57,9 +56,9 @@
                     </div>
                 </div>
             </div>
-            <div class="formBackground calories">
-                <p>Oblicz swoje dzienne zapotrzebowanie na <span>kalorie.</span></p>
-                <form class="caloriesForm">
+            <div class="formBackground basicMetabolism">
+                <p>Oblicz swoją <span>podstawową</span> przemianę materii</p>
+                <form class="bmForm">
                     <label id="genderType">Płeć:</label>
                     <input type="radio" name="Radio" value="1" class="womanRadio" placeholder=" ">
                     <label class="gender" id="genderWoman">K</label>
@@ -92,15 +91,43 @@
                 <div class="caloriesBtn" type="button">
                     <p>OBLICZ!</p>
                 </div>
-
-
-
-
-
-
             </div>
-            <div class="formBackground basicMetabolism"> podstawowa przemiana materii</div>
-            <div class="formBackground totalMetabolism"> calkowita przemiana materii</div>
+            <div class="formBackground totalMetabolism">
+                <p>Oblicz swoją <span>całkowitą</span> przemianę materii</p>
+                <form class="tmForm">
+                    <label id="genderType">Płeć:</label>
+                    <input type="radio" name="Radio" value="1" class="womanRadio" placeholder=" ">
+                    <label class="gender" id="genderWoman">K</label>
+                    <input type="radio" name="Radio" value="2" class="menRadio" placeholder=" ">
+                    <label class="gender" id="genderMan">M</label>
+                    <br>
+                    <label id="heightLabel">Wiek:</label>
+                    <input type="text" class="firstInputBmi old" id="height" name="old" placeholder="">
+                    <label id="oldUnit">(18-99)</label>
+                    <br>
+                    <label id="heightLabel">Wzrost:</label>
+                    <input type="text" class="firstInputBmi" id="height" name="height" placeholder=" ">
+                    <label id="cmUnit">cm</label>
+                    <br>
+                    <label id="weightLabel">Waga:</label>
+                    <input type="text" class="secondInputBmi" id="weight" name="weight" placeholder=" ">
+                    <label id="kgUnit">kg</label>
+                    <br>
+                    <label id="kgUnit">Poziom aktywności fizycznej: </label>
+                    <select>
+                        <option value="zeroActyvity">Brak aktywności fizycznej</option>
+                        <option value="smallActyvity">Mała aktywność fizyczna (1-3 razy tygodniowo)</option>
+                        <option value="mediumActyvity">Średnia aktywność fizyczna (3-5 razy tygodniowo)</option>
+                        <option value="bigActyvity">Duża aktywność fizyczna (codziennie)</option>
+                        <option value="veryBigActyvity">Bardzo duża aktywność fizyczna (codziennie)</option>
+                    </select>
+
+                    <label class="errorLabel"></label>
+                </form>
+                <div class="caloriesBtn" type="button">
+                    <p>OBLICZ!</p>
+                </div>
+            </div>
         </div>
 
         <div class="bgClick">

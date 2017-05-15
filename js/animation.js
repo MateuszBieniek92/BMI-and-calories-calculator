@@ -249,6 +249,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
+
+
     // FORM 2 - BASIC METABOLISM CALCULATOR
 
     //const basicMetaForm = document.querySelector('.basicMetabolism');
@@ -259,12 +261,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const methodOption = bmForm.querySelector('.methodOption');
     const methodOne = methodOption.children[0];
     const methodTwo = methodOption.children[1];
-    const methodThree = methodOption.children[2];
 
     //gender labels
     const gender = bmForm.querySelector('#genderType');
     const genderWoman = bmForm.querySelector('#genderWoman');
     const genderMan = bmForm.querySelector('#genderMan');
+
+    //sex
+    const womanBasicMeta = bmForm.querySelector('.womanRadio');
+    const menBasicMeta = bmForm.querySelector('.menRadio');
 
     //old labels and input
     const oldLabel = bmForm.querySelector('#oldLabel');
@@ -300,6 +305,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
         errorLabelBasicMeta.innererrorText = '';
 
+        function benedictHarris() {
+            var ppm;
+            if (womanBasicMeta.checked) {
+                ppm = 665.1 + (9.5634 * weightVal) + (1.8496 * heightVal) - (4.6756 * oldVal);
+            } else if (menBasicMeta.checked) {
+                ppm = 66.5 + (13.75 * weightVal) + (5.003 * heightVal) - (6.775 * oldVal);
+            }
+            return ppm;
+        }
+
+        function mifflinJeor() {
+            var ppm;
+            if (womanBasicMeta.checked) {
+                ppm = (10 * weightVal) + (6.25 * heightVal) - (5 * oldVal) - 161;
+            } else if (menBasicMeta.checked) {
+                ppm = (10 * weightVal) + (6.25 * heightVal) - (5 * oldVal) + 5;
+            }
+            return ppm;
+        }
+
         gender.style.color = "black";
         genderWoman.style.color = "black";
         genderMan.style.color = "black";
@@ -310,40 +335,33 @@ document.addEventListener("DOMContentLoaded", function () {
         weightBasicMeta.style.color = "black";
         kgUnitBasicMeta.style.color = "black";
         errorLabelBasicMeta.style.color = "black";
-        
+
         oldInput.style.border = "none";
         heightInputBasicMeta.style.border = "none";
         weightInputBasicMeta.style.border = "none";
 
-        if (oldInput !== "" &&  heightInputBasicMeta !== "" &&  weightInputBasicMeta !== "") {
-            
-        }
+        //        if (oldInput !== "" &&  heightInputBasicMeta !== "" &&  weightInputBasicMeta !== "") {
+        //            
+        //        }
 
-            
-            
-            
-            
-            
-            
-            
-            
 
+
+
+        /// selected method
+        if (methodOne.selected) {
+            benedictHarris();
+            console.log(benedictHarris());
+        } else if (methodTwo.selected) {
+            mifflinJeor()
+            console.log(mifflinJeor());
+        } 
     }
 
-    caloriesBtn.addEventListener('click', function (e) {
+        caloriesBtn.addEventListener('click', function (e) {
         basicMetabolismFormSend();
         e.preventDefault();
     });
-
-
-
-
-
-
-
-
-
-    console.log(gender, genderWoman, genderMan);
-
+    
+    
     init();
 });

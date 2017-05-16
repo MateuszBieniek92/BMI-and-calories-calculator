@@ -194,16 +194,17 @@ section .photo {
   top: 30px;
   border-radius: 2px;
   display: block;
-  margin: auto; }
+  margin: auto;
+  box-shadow: 0px 0px 31px 0px rgba(0, 0, 0, 0.52); }
 
 @media (min-width: 450px) {
-  /* line 152, scss/main.css */
+  /* line 153, scss/main.css */
   .formBackground {
     width: 350px;
     height: 550px; } }
 
 @media (min-width: 900px) {
-  /* line 156, scss/main.css */
+  /* line 157, scss/main.css */
   .formBackground {
     right: 250px;
     position: relative;
@@ -211,21 +212,21 @@ section .photo {
     height: 550px; } }
 
 @media (min-width: 1200px) {
-  /* line 162, scss/main.css */
+  /* line 163, scss/main.css */
   .formBackground {
     right: 400px; } }
 
 @media (min-width: 1200px) {
-  /* line 166, scss/main.css */
+  /* line 167, scss/main.css */
   .calories {
     width: 400px; } }
 
-/* line 169, scss/main.css */
+/* line 170, scss/main.css */
 .basicMetabolism,
 .totalMetabolism {
   height: 600px; }
 
-/* line 173, scss/main.css */
+/* line 174, scss/main.css */
 .bmi p,
 .basicMetabolism p,
 .totalMetabolism p {
@@ -235,14 +236,14 @@ section .photo {
   text-align: center;
   font-weight: 500; }
 
-/* line 181, scss/main.css */
+/* line 182, scss/main.css */
 .bmi p span,
 .basicMetabolism p span,
 .totalMetabolism p span {
   font-size: 27px;
   font-weight: 600; }
 
-/* line 187, scss/main.css */
+/* line 188, scss/main.css */
 .bmi .bmiForm label,
 .bmi .bmForm label,
 .bmi .tmForm label,
@@ -257,7 +258,7 @@ section .photo {
   top: 2px;
   position: relative; }
 
-/* line 201, scss/main.css */
+/* line 202, scss/main.css */
 .bmi .bmiForm .methodOption,
 .bmi .bmForm .methodOption,
 .bmi .tmForm .methodOption,
@@ -270,7 +271,7 @@ section .photo {
   height: 35px;
   margin: 20px 0 0px 40px; }
 
-/* line 213, scss/main.css */
+/* line 214, scss/main.css */
 .bmi .bmiForm .activity,
 .bmi .bmForm .activity,
 .bmi .tmForm .activity,
@@ -285,7 +286,7 @@ section .photo {
   margin: 20px 0 0px 10px; }
 
 @media (min-width: 450px) {
-  /* line 226, scss/main.css */
+  /* line 227, scss/main.css */
   .bmi .bmiForm .activity,
   .bmi .bmForm .activity,
   .bmi .tmForm .activity,
@@ -297,7 +298,7 @@ section .photo {
   .totalMetabolism .tmForm .activity {
     margin: 20px 0 0px 15px; } }
 
-/* line 237, scss/main.css */
+/* line 238, scss/main.css */
 .bmi .bmiForm .gender,
 .bmi .bmForm .gender,
 .bmi .tmForm .gender,
@@ -311,7 +312,7 @@ section .photo {
   height: 30px;
   margin: 20px 0 20px 15px; }
 
-/* line 250, scss/main.css */
+/* line 251, scss/main.css */
 .bmi .bmiForm input[type='text'],
 .bmi .bmForm input[type='text'],
 .bmi .tmForm input[type='text'],
@@ -324,7 +325,7 @@ section .photo {
   height: 35px;
   width: 150px; }
 
-/* line 262, scss/main.css */
+/* line 263, scss/main.css */
 .bmi .bmiForm .old,
 .bmi .bmForm .old,
 .bmi .tmForm .old,
@@ -336,7 +337,7 @@ section .photo {
 .totalMetabolism .tmForm .old {
   margin: 20px 0 20px -10px; }
 
-/* line 273, scss/main.css */
+/* line 274, scss/main.css */
 .bmi .bmiForm #oldUnit,
 .bmi .bmForm #oldUnit,
 .bmi .tmForm #oldUnit,
@@ -349,7 +350,7 @@ section .photo {
   font-size: 16px; }
 
 @media (min-width: 1200px) {
-  /* line 284, scss/main.css */
+  /* line 285, scss/main.css */
   .bmi .bmiForm #oldUnit,
   .bmi .bmForm #oldUnit,
   .bmi .tmForm #oldUnit,
@@ -361,7 +362,7 @@ section .photo {
   .totalMetabolism .tmForm #oldUnit {
     font-size: 18px; } }
 
-/* line 295, scss/main.css */
+/* line 296, scss/main.css */
 .bmi .bmiForm .firstInputBmi,
 .bmi .bmForm .firstInputBmi,
 .bmi .tmForm .firstInputBmi,
@@ -373,7 +374,7 @@ section .photo {
 .totalMetabolism .tmForm .firstInputBmi {
   margin: 20px 0 20px -10px; }
 
-/* line 306, scss/main.css */
+/* line 307, scss/main.css */
 .bmi .bmiForm .secondInputBmi,
 .bmi .bmForm .secondInputBmi,
 .bmi .tmForm .secondInputBmi,
@@ -385,7 +386,7 @@ section .photo {
 .totalMetabolism .tmForm .secondInputBmi {
   margin: 20px 0 20px 0px; }
 
-/* line 317, scss/main.css */
+/* line 318, scss/main.css */
 .bmi .bmiForm .thirdInputBmi,
 .bmi .bmForm .thirdInputBmi,
 .bmi .tmForm .thirdInputBmi,
@@ -397,7 +398,7 @@ section .photo {
 .totalMetabolism .tmForm .thirdInputBmi {
   margin: 20px 0 20px 6px; }
 
-/* line 328, scss/main.css */
+/* line 329, scss/main.css */
 .bmi .bmiForm input[type='radio'],
 .bmi .bmForm input[type='radio'],
 .bmi .tmForm input[type='radio'],
@@ -413,7 +414,7 @@ section .photo {
   position: relative;
   top: 9px; }
 
-/* line 343, scss/main.css */
+/* line 344, scss/main.css */
 .bmi .bmiForm .errorLabel,
 .bmi .bmForm .errorLabel,
 .bmi .tmForm .errorLabel,
@@ -427,7 +428,7 @@ section .photo {
   font-weight: 500;
   color: red; }
 
-/* line 356, scss/main.css */
+/* line 357, scss/main.css */
 .bmiBtn,
 .caloriesBtn,
 .totalMetabolismBtn {
@@ -441,7 +442,7 @@ section .photo {
   margin: 50px auto; }
 
 @media (min-width: 450px) {
-  /* line 368, scss/main.css */
+  /* line 369, scss/main.css */
   .bmiBtn,
   .caloriesBtn,
   .totalMetabolismBtn {
@@ -453,7 +454,7 @@ section .photo {
     text-align: center;
     position: relative; } }
 
-/* line 378, scss/main.css */
+/* line 379, scss/main.css */
 .bmiBtn p,
 .caloriesBtn p,
 .totalMetabolismBtn p {
@@ -465,24 +466,24 @@ section .photo {
   letter-spacing: 1px; }
 
 @media (min-width: 450px) {
-  /* line 388, scss/main.css */
+  /* line 389, scss/main.css */
   .bmiBtn p,
   .caloriesBtn p,
   .totalMetabolismBtn p {
     padding-top: calc(50% - 118px);
     margin: 85px auto; } }
 
-/* line 394, scss/main.css */
+/* line 395, scss/main.css */
 .caloriesBtn,
 .totalMetabolismBtn {
   margin: 20px auto; }
 
-/* line 397, scss/main.css */
+/* line 398, scss/main.css */
 .caloriesBtn p,
 .totalMetabolismBtn p {
   margin: 20px auto; }
 
-/* line 401, scss/main.css */
+/* line 402, scss/main.css */
 .bmiBtn:hover,
 .caloriesBtn:hover,
 .totalMetabolismBtn:hover {
@@ -490,7 +491,7 @@ section .photo {
   background-image: linear-gradient(to bottom, #ffaf5e, #ff8400);
   text-decoration: none; }
 
-/* line 408, scss/main.css */
+/* line 409, scss/main.css */
 .bar1,
 .bar2,
 .bar3 {
@@ -500,29 +501,29 @@ section .photo {
   margin: 6px 0;
   transition: 0.4s; }
 
-/* line 417, scss/main.css */
+/* line 418, scss/main.css */
 .change .bar1 {
   -webkit-transform: rotate(-45deg) translate(-9px, 6px);
   transform: rotate(-45deg) translate(-9px, 6px); }
 
-/* line 421, scss/main.css */
+/* line 422, scss/main.css */
 .change .bar2 {
   opacity: 0; }
 
-/* line 424, scss/main.css */
+/* line 425, scss/main.css */
 .change .bar3 {
   -webkit-transform: rotate(45deg) translate(-8px, -8px);
   transform: rotate(45deg) translate(-8px, -8px); }
 
-/* line 428, scss/main.css */
+/* line 429, scss/main.css */
 .visible label {
   color: red; }
 
-/* line 431, scss/main.css */
+/* line 432, scss/main.css */
 .visible input {
   border: 2px solid red; }
 
-/* line 434, scss/main.css */
+/* line 435, scss/main.css */
 .bgClick {
   display: none;
   width: 100vw;
@@ -537,11 +538,11 @@ section .photo {
   background-position: center top; }
 
 @media (min-width: 450px) {
-  /* line 447, scss/main.css */
+  /* line 448, scss/main.css */
   .bgClick {
     height: 100vh; } }
 
-/* line 449, scss/main.css */
+/* line 450, scss/main.css */
 .bgClick .finalFormBg {
   right: 0;
   top: 85px;
@@ -550,12 +551,12 @@ section .photo {
   background: white; }
 
 @media (min-width: 450px) {
-  /* line 456, scss/main.css */
+  /* line 457, scss/main.css */
   .bgClick .finalFormBg {
     top: 150px;
     width: 600px; } }
 
-/* line 459, scss/main.css */
+/* line 460, scss/main.css */
 .bgClick .finalFormBg h2 {
   font-size: 25px;
   font-weight: 600;
@@ -564,28 +565,28 @@ section .photo {
   padding: 20px 0; }
 
 @media (min-width: 450px) {
-  /* line 466, scss/main.css */
+  /* line 467, scss/main.css */
   .bgClick .finalFormBg h2 {
     font-size: 25px; } }
 
-/* line 468, scss/main.css */
+/* line 469, scss/main.css */
 .bgClick .finalFormBg p {
   font-size: 20px;
   text-align: center;
   padding: 20px; }
 
-/* line 472, scss/main.css */
+/* line 473, scss/main.css */
 .bgClick .finalFormBg p span {
   font-size: 20px;
   font-weight: 600;
   color: #ff971f; }
 
-/* line 476, scss/main.css */
+/* line 477, scss/main.css */
 .bgClick .bmiScale,
 .bgClick .ppmScale {
   display: none; }
 
-/* line 479, scss/main.css */
+/* line 480, scss/main.css */
 .bgClick .bmiScale h2,
 .bgClick .ppmScale h2 {
   font-size: 25px;
@@ -595,12 +596,12 @@ section .photo {
   padding: 20px 0; }
 
 @media (min-width: 450px) {
-  /* line 487, scss/main.css */
+  /* line 488, scss/main.css */
   .bgClick .bmiScale h2,
   .bgClick .ppmScale h2 {
     font-size: 25px; } }
 
-/* line 490, scss/main.css */
+/* line 491, scss/main.css */
 .bgClick .bmiScale .list,
 .bgClick .ppmScale .list {
   padding-top: 10px;
@@ -608,7 +609,7 @@ section .photo {
   font-size: 15px;
   list-style: none; }
 
-/* line 496, scss/main.css */
+/* line 497, scss/main.css */
 .bgClick .bmiScale .list li,
 .bgClick .ppmScale .list li {
   text-align: center;
@@ -616,23 +617,23 @@ section .photo {
   font-size: 13px; }
 
 @media (min-width: 450px) {
-  /* line 502, scss/main.css */
+  /* line 503, scss/main.css */
   .bgClick .bmiScale .list li,
   .bgClick .ppmScale .list li {
     font-size: 15px; } }
 
-/* line 505, scss/main.css */
+/* line 506, scss/main.css */
 .bgClick .bmiScale #ppmFont,
 .bgClick .ppmScale #ppmFont {
   font-size: 10px; }
 
 @media (min-width: 450px) {
-  /* line 509, scss/main.css */
+  /* line 510, scss/main.css */
   .bgClick .bmiScale #ppmFont,
   .bgClick .ppmScale #ppmFont {
     font-size: 15px; } }
 
-/* line 512, scss/main.css */
+/* line 513, scss/main.css */
 .bgClick .closeFormBtn {
   cursor: pointer;
   margin-left: 2%;
@@ -645,13 +646,13 @@ section .photo {
   margin-left: auto; }
 
 @media (min-width: 450px) {
-  /* line 523, scss/main.css */
+  /* line 524, scss/main.css */
   .bgClick .closeFormBtn {
     width: 265px;
     height: 50px;
     margin: 50px auto; } }
 
-/* line 527, scss/main.css */
+/* line 528, scss/main.css */
 .bgClick .closeFormBtn p {
   text-shadow: 1px 1px 3px #854900;
   font-size: 17px;
@@ -661,6 +662,6 @@ section .photo {
   letter-spacing: 1px; }
 
 @media (min-width: 450px) {
-  /* line 535, scss/main.css */
+  /* line 536, scss/main.css */
   .bgClick .closeFormBtn p {
     padding-top: calc(50% - 118px); } }

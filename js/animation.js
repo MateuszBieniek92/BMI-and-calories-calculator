@@ -305,7 +305,7 @@ document.addEventListener("DOMContentLoaded", function () {
             } else if (bmMen.checked) {
                 ppm = 66.5 + (13.75 * weightVal) + (5.003 * heightVal) - (6.775 * oldVal);
             }
-            return ppmResult.innerText = ppm;
+            return ppmResult.innerText = roundNumber(ppm,2);
         }
 
         function mifflinJeor() {
@@ -315,16 +315,17 @@ document.addEventListener("DOMContentLoaded", function () {
             } else if (bmMen.checked) {
                 ppm = (10 * weightVal) + (6.25 * heightVal) - (5 * oldVal) + 5;
             }
-            return ppmResult.innerText = ppm;
+            return ppmResult.innerText = roundNumber(ppm,2);
         }
 
         function methodSelected() {
             if (methodOne.selected) {
                 benedictHarris();
             } else if (methodTwo.selected) {
-                mifflinJeor()
+                mifflinJeor();
             }
         }
+        
 
         function oldAlert() {
             bmOldLabel.style.color = "red";
@@ -378,6 +379,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 ppmScale.style.display = 'block';
                                 ppmDesc.style.display = 'block';
                                 closeFormBg.style.display = "block";
+                                head.innerText = 'Gratulacje!';
                                 bmErrorLabel.innerText = '';
 
                             } else {
@@ -532,8 +534,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const zeroActivity = tmActivity.children[0];
     const smallActivity = tmActivity.children[1];
     const mediumActivity = tmActivity.children[2];
-    const bigActivity = tmActivity.children[3];
-    const veryBigActivity = tmActivity.children[4];
+    const activeActivity = tmActivity.children[3];
+    const bigActivity = tmActivity.children[4];
+    const veryBigActivity = tmActivity.children[5];
 
     // error btn
 
@@ -578,6 +581,40 @@ document.addEventListener("DOMContentLoaded", function () {
             tmGenderMan.style.color = "red";
         }
 
+        function mifflinJeor() {
+            var ppm;
+            if (tmWoman.checked) {
+                ppm = (10 * weightVal) + (6.25 * heightVal) - (5 * oldVal) - 161;
+            } else if (tmMen.checked) {
+                ppm = (10 * weightVal) + (6.25 * heightVal) - (5 * oldVal) + 5;
+            }
+            return roundNumber(ppm,2);
+        }
+
+        function active() {
+            var pal;
+            if (zeroActivity.selected) {
+                pal = 1.25;
+            } else if (smallActivity.selected) {
+                pal = 1.4;
+            } else if (mediumActivity.selected) {
+                pal = 1.6;
+            } else if (activeActivity.selected) {
+                pal = 1.75;
+            } else if (bigActivity.selected) {
+                pal = 2.0;
+            } else if (veryBigActivity.selected) {
+                pal = 2.30;
+            }
+            return pal;
+        }
+
+        function cpmResult() {
+            var cpm;
+            cpm = mifflinJeor() * active();
+            return roundNumber(cpm,2);
+        }
+
         tmErrorLabel.innererrorText = '';
         tmGender.style.color = "black";
         tmGenderWoman.style.color = "black";
@@ -599,15 +636,16 @@ document.addEventListener("DOMContentLoaded", function () {
                     if (heightVal.length > 2) {
                         if (weightVal.length > 1) {
                             if (tmMen.checked == true || tmWoman.checked == true) {
-                                
-                                console.log('wszystko dziala ok');
-                                
+                                cpmResult();
+                                console.log(cpmResult());
+
                                 bmiDesc.style.display = 'none';
                                 ppmDesc.style.display = 'none';
                                 ppmScale.style.display = 'none';
                                 ppmDesc.style.display = 'none';
 
                                 closeFormBg.style.display = "block";
+                                head.innerText = 'Gratulacje!';
                                 tmErrorLabel.innerText = '';
 
                             } else {

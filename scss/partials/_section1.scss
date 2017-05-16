@@ -288,9 +288,9 @@ section {
 }
 
 .bgClick {
-    display: none;
+        display: none;
     width: 100vw;
-    height: 100vh;
+    height: 125vh;
     z-index: 500;
     opacity: 1;
     position: absolute;
@@ -299,6 +299,9 @@ section {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
+    @media (min-width: 450px) {
+        height: 100vh;
+    }
     .finalFormBg {
         right: 0;
         top: 85px;
@@ -330,7 +333,8 @@ section {
             }
         }
     }
-    .bmiScale {
+    .bmiScale,
+    .ppmScale {
         display: none;
         h2 {
             font-size: 25px;
@@ -354,6 +358,12 @@ section {
                 @media (min-width: 450px) {
                     font-size: 15px;
                 }
+            }
+        }
+        #ppmFont {
+            font-size: 10px;
+            @media (min-width: 450px) {
+                font-size: 15px;
             }
         }
     }

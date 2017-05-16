@@ -526,7 +526,7 @@ section .photo {
 .bgClick {
   display: none;
   width: 100vw;
-  height: 100vh;
+  height: 125vh;
   z-index: 500;
   opacity: 1;
   position: absolute;
@@ -536,7 +536,12 @@ section .photo {
   background-repeat: no-repeat;
   background-position: center top; }
 
-/* line 446, scss/main.css */
+@media (min-width: 450px) {
+  /* line 447, scss/main.css */
+  .bgClick {
+    height: 100vh; } }
+
+/* line 449, scss/main.css */
 .bgClick .finalFormBg {
   right: 0;
   top: 85px;
@@ -545,12 +550,12 @@ section .photo {
   background: white; }
 
 @media (min-width: 450px) {
-  /* line 453, scss/main.css */
+  /* line 456, scss/main.css */
   .bgClick .finalFormBg {
     top: 150px;
     width: 600px; } }
 
-/* line 456, scss/main.css */
+/* line 459, scss/main.css */
 .bgClick .finalFormBg h2 {
   font-size: 25px;
   font-weight: 600;
@@ -559,28 +564,30 @@ section .photo {
   padding: 20px 0; }
 
 @media (min-width: 450px) {
-  /* line 463, scss/main.css */
+  /* line 466, scss/main.css */
   .bgClick .finalFormBg h2 {
     font-size: 25px; } }
 
-/* line 465, scss/main.css */
+/* line 468, scss/main.css */
 .bgClick .finalFormBg p {
   font-size: 20px;
   text-align: center;
   padding: 20px; }
 
-/* line 469, scss/main.css */
+/* line 472, scss/main.css */
 .bgClick .finalFormBg p span {
   font-size: 20px;
   font-weight: 600;
   color: #ff971f; }
 
-/* line 473, scss/main.css */
-.bgClick .bmiScale {
+/* line 476, scss/main.css */
+.bgClick .bmiScale,
+.bgClick .ppmScale {
   display: none; }
 
-/* line 475, scss/main.css */
-.bgClick .bmiScale h2 {
+/* line 479, scss/main.css */
+.bgClick .bmiScale h2,
+.bgClick .ppmScale h2 {
   font-size: 25px;
   font-weight: 600;
   color: #ff971f;
@@ -588,29 +595,44 @@ section .photo {
   padding: 20px 0; }
 
 @media (min-width: 450px) {
-  /* line 482, scss/main.css */
-  .bgClick .bmiScale h2 {
+  /* line 487, scss/main.css */
+  .bgClick .bmiScale h2,
+  .bgClick .ppmScale h2 {
     font-size: 25px; } }
 
-/* line 484, scss/main.css */
-.bgClick .bmiScale .list {
+/* line 490, scss/main.css */
+.bgClick .bmiScale .list,
+.bgClick .ppmScale .list {
   padding-top: 10px;
   text-align: center;
   font-size: 15px;
   list-style: none; }
 
-/* line 489, scss/main.css */
-.bgClick .bmiScale .list li {
+/* line 496, scss/main.css */
+.bgClick .bmiScale .list li,
+.bgClick .ppmScale .list li {
   text-align: center;
   list-style: none;
   font-size: 13px; }
 
 @media (min-width: 450px) {
-  /* line 494, scss/main.css */
-  .bgClick .bmiScale .list li {
+  /* line 502, scss/main.css */
+  .bgClick .bmiScale .list li,
+  .bgClick .ppmScale .list li {
     font-size: 15px; } }
 
-/* line 496, scss/main.css */
+/* line 505, scss/main.css */
+.bgClick .bmiScale #ppmFont,
+.bgClick .ppmScale #ppmFont {
+  font-size: 10px; }
+
+@media (min-width: 450px) {
+  /* line 509, scss/main.css */
+  .bgClick .bmiScale #ppmFont,
+  .bgClick .ppmScale #ppmFont {
+    font-size: 15px; } }
+
+/* line 512, scss/main.css */
 .bgClick .closeFormBtn {
   cursor: pointer;
   margin-left: 2%;
@@ -623,13 +645,13 @@ section .photo {
   margin-left: auto; }
 
 @media (min-width: 450px) {
-  /* line 507, scss/main.css */
+  /* line 523, scss/main.css */
   .bgClick .closeFormBtn {
     width: 265px;
     height: 50px;
     margin: 50px auto; } }
 
-/* line 511, scss/main.css */
+/* line 527, scss/main.css */
 .bgClick .closeFormBtn p {
   text-shadow: 1px 1px 3px #854900;
   font-size: 17px;
@@ -639,6 +661,6 @@ section .photo {
   letter-spacing: 1px; }
 
 @media (min-width: 450px) {
-  /* line 519, scss/main.css */
+  /* line 535, scss/main.css */
   .bgClick .closeFormBtn p {
     padding-top: calc(50% - 118px); } }

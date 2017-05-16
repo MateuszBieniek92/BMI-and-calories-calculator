@@ -333,6 +333,31 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
 
+        function oldAlert() {
+            oldLabel.style.color = "red";
+            oldUnit.style.color = "red";
+            oldInput.style.border = "2px solid red";
+        }
+
+
+        function heightAlert() {
+            heightBasicMeta.style.color = "red";
+            cmUnitBasicMeta.style.color = "red";
+            heightInputBasicMeta.style.border = "2px solid red";
+        }
+
+        function weightAlert() {
+            weightBasicMeta.style.color = "red";
+            kgUnitBasicMeta.style.color = "red";
+            weightInputBasicMeta.style.border = "2px solid red";
+        }
+
+        function genderAlert() {
+            gender.style.color = "red";
+            genderWoman.style.color = "red";
+            genderMan.style.color = "red";
+        }
+
 
 
 
@@ -347,7 +372,6 @@ document.addEventListener("DOMContentLoaded", function () {
         cmUnitBasicMeta.style.color = "black";
         weightBasicMeta.style.color = "black";
         kgUnitBasicMeta.style.color = "black";
-        errorLabelBasicMeta.style.color = "black";
 
         oldInput.style.border = "none";
         heightInputBasicMeta.style.border = "none";
@@ -359,121 +383,85 @@ document.addEventListener("DOMContentLoaded", function () {
                     if (heightVal.length > 2) {
                         if (weightVal.length > 1) {
                             if (menBasicMeta.checked == true || womanBasicMeta.checked == true) {
-
-                                errorLabelBasicMeta.innererrorText = '';
+                                errorLabelBasicMeta.innerText = '';
                                 methodSelected();
-                                ///dalej
-
 
 
 
                             } else {
-                                errorLabelBasicMeta.style.color = "red";
                                 errorLabelBasicMeta.innerText = "Zaznacz płeć!";
-                                gender.style.color = "red";
-                                genderWoman.style.color = "red";
-                                genderMan.style.color = "red";
+                                genderAlert();
                             }
 
                         } else {
-                            errorLabelBasicMeta.style.color = "red";
                             errorLabelBasicMeta.innerText = "Podana waga nie jest prawidłowa!";
-                            weightBasicMeta.style.color = "red";
-                            kgUnitBasicMeta.style.color = "red";
-                            weightInputBasicMeta.style.border = "2px solid red";
+                            weightAlert();
                         }
                     } else {
-                        errorLabelBasicMeta.style.color = "red";
                         errorLabelBasicMeta.innerText = "Podany wzrost nie jest prawidłowy!";
-                        heightBasicMeta.style.color = "red";
-                        cmUnitBasicMeta.style.color = "red";
-                        heightInputBasicMeta.style.border = "2px solid red";
+                        heightAlert();
                     }
                 } else {
-                    errorLabelBasicMeta.style.color = "red";
                     errorLabelBasicMeta.innerText = "Podany wiek nie jest prawidłowy!";
-                    oldLabel.style.color = "red";
-                    oldUnit.style.color = "red";
-                    oldInput.style.border = "2px solid red";
+                    oldAlert();
                 }
             } else {
-                errorLabelBasicMeta.style.color = "red";
-                errorLabelBasicMeta.innerText = "Jeden lub więcej parametrów nie jest liczbą!";
-                oldLabel.style.color = "red";
-                oldUnit.style.color = "red";
-                oldInput.style.border = "2px solid red";
-                heightBasicMeta.style.color = "red";
-                cmUnitBasicMeta.style.color = "red";
-                heightInputBasicMeta.style.border = "2px solid red";
-                weightBasicMeta.style.color = "red";
-                kgUnitBasicMeta.style.color = "red";
-                weightInputBasicMeta.style.border = "2px solid red";
+                if (isNumericOld && isNumericWeight) {
+                    heightAlert();
+                    errorLabelBasicMeta.innerText = "Wzrost musi być liczbą!";
+                } else if (isNumericOld && isNumericHeight) {
+                    weightAlert();
+                    errorLabelBasicMeta.innerText = "Waga musi być liczbą!";
+                } else if (isNumericHeight && isNumericWeight) {
+                    oldAlert();
+                    errorLabelBasicMeta.innerText = "Wiek musi być liczbą!";
+                } else if (isNumericOld) {
+                    heightAlert();
+                    weightAlert();
+                    errorLabelBasicMeta.innerText = "Wzrost i waga muszą być liczbami!";
+                } else if (isNumericHeight) {
+                    oldAlert();
+                    weightAlert();
+                    errorLabelBasicMeta.innerText = "Wiek i waga muszą być liczbami!";
+                } else if (isNumericWeight) {
+                    oldAlert();
+                    heightAlert();
+                    errorLabelBasicMeta.innerText = "Wiek i wzrost muszą być liczbami!";
+                } else {
+                    errorLabelBasicMeta.innerText = "Podane parametry nie są liczbami!";
+                    oldAlert();
+                    heightAlert();
+                    weightAlert();
+                }
             }
         } else {
             if (oldVal !== "" && heightVal == "" && weightVal == "") {
-                heightBasicMeta.style.color = "red";
-                cmUnitBasicMeta.style.color = "red";
-                heightInputBasicMeta.style.border = "2px solid red";
-                weightBasicMeta.style.color = "red";
-                kgUnitBasicMeta.style.color = "red";
-                weightInputBasicMeta.style.border = "2px solid red";
+                heightAlert();
+                weightAlert();
             } else if (oldVal !== "" && heightVal !== "" && weightVal == "") {
-                weightBasicMeta.style.color = "red";
-                kgUnitBasicMeta.style.color = "red";
-                weightInputBasicMeta.style.border = "2px solid red";
+                weightAlert();
             } else if (oldVal !== "" && heightVal == "" && weightVal !== "") {
-                heightBasicMeta.style.color = "red";
-                cmUnitBasicMeta.style.color = "red";
-                heightInputBasicMeta.style.border = "2px solid red";
+                heightAlert();
             } else if (heightVal !== "" && oldVal == "" && weightVal == "") {
-                oldLabel.style.color = "red";
-                oldUnit.style.color = "red";
-                oldInput.style.border = "2px solid red";
-                weightBasicMeta.style.color = "red";
-                kgUnitBasicMeta.style.color = "red";
-                weightInputBasicMeta.style.border = "2px solid red";
+                oldAlert();
+                weightAlert();
             } else if (heightVal !== "" && oldVal !== "" && weightVal == "") {
-                weightBasicMeta.style.color = "red";
-                kgUnitBasicMeta.style.color = "red";
-                weightInputBasicMeta.style.border = "2px solid red";
+                weightAlert();
             } else if (heightVal !== "" && oldVal == "" && weightVal !== "") {
-                oldLabel.style.color = "red";
-                oldUnit.style.color = "red";
-                oldInput.style.border = "2px solid red";
+                oldAlert();
             } else if (weightVal !== "" && heightVal == "" && oldVal == "") {
-                oldLabel.style.color = "red";
-                oldUnit.style.color = "red";
-                oldInput.style.border = "2px solid red";
-                heightBasicMeta.style.color = "red";
-                cmUnitBasicMeta.style.color = "red";
-                heightInputBasicMeta.style.border = "2px solid red";
+                oldAlert();
+                heightAlert();
             } else if (weightVal !== "" && heightVal !== "" && oldVal == "") {
-                heightBasicMeta.style.color = "red";
-                cmUnitBasicMeta.style.color = "red";
-                heightInputBasicMeta.style.border = "2px solid red";
+                heightAlert();
             } else {
-                oldLabel.style.color = "red";
-                oldUnit.style.color = "red";
-                oldInput.style.border = "2px solid red";
-                heightBasicMeta.style.color = "red";
-                cmUnitBasicMeta.style.color = "red";
-                heightInputBasicMeta.style.border = "2px solid red";
-                weightBasicMeta.style.color = "red";
-                kgUnitBasicMeta.style.color = "red";
-                weightInputBasicMeta.style.border = "2px solid red";
+                oldAlert();
+                heightAlert();
+                weightAlert();
             }
             errorLabelBasicMeta.style.color = "red";
             errorLabelBasicMeta.innerText = "Wypełnij dane formularza!";
         }
-
-        /// selected method
-        //        if (methodOne.selected) {
-        //            benedictHarris();
-        //            console.log(benedictHarris());
-        //        } else if (methodTwo.selected) {
-        //            mifflinJeor()
-        //            console.log(mifflinJeor());
-        //        }
     }
 
     caloriesBtn.addEventListener('click', function (e) {

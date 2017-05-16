@@ -66,34 +66,34 @@ document.addEventListener("DOMContentLoaded", function () {
     const methodTwo = methodOption.children[1];
 
     //gender labels
-    const gender = bmForm.querySelector('#genderType');
-    const genderWoman = bmForm.querySelector('#genderWoman');
-    const genderMan = bmForm.querySelector('#genderMan');
+    const bmGender = bmForm.querySelector('#genderType');
+    const bmGenderWoman = bmForm.querySelector('#genderWoman');
+    const bmGenderMan = bmForm.querySelector('#genderMan');
 
     //sex
-    const womanBasicMeta = bmForm.querySelector('.womanRadio');
-    const menBasicMeta = bmForm.querySelector('.menRadio');
+    const bmWoman = bmForm.querySelector('.womanRadio');
+    const bmMen = bmForm.querySelector('.menRadio');
 
     //old labels and input
-    const oldLabel = bmForm.querySelector('#oldLabel');
-    const oldInput = bmForm.querySelector('.thirdInputBmi');
-    const oldUnit = bmForm.querySelector('#oldUnit');
+    const bmOldLabel = bmForm.querySelector('#oldLabel');
+    const bmOldInput = bmForm.querySelector('.thirdInputBmi');
+    const bmOldUnit = bmForm.querySelector('#oldUnit');
 
     //height labels and unit
 
-    const heightBasicMeta = bmForm.querySelector('#heightLabel');
-    const heightInputBasicMeta = bmForm.querySelector('.firstInputBmi');
-    const cmUnitBasicMeta = bmForm.querySelector('#cmUnit');
+    const bmHeight = bmForm.querySelector('#heightLabel');
+    const bmHeightInput = bmForm.querySelector('.firstInputBmi');
+    const bmCmUnit = bmForm.querySelector('#cmUnit');
 
     //weight labels and unit
 
-    const weightBasicMeta = bmForm.querySelector('#weightLabel');
-    const weightInputBasicMeta = bmForm.querySelector('.secondInputBmi');
-    const kgUnitBasicMeta = bmForm.querySelector('#kgUnit');
+    const bmWeight = bmForm.querySelector('#weightLabel');
+    const bmWeightInput = bmForm.querySelector('.secondInputBmi');
+    const bmKgUnit = bmForm.querySelector('#kgUnit');
 
     // error btn
 
-    const errorLabelBasicMeta = bmForm.querySelector('.errorLabel');
+    const bmErrorLabel = bmForm.querySelector('.errorLabel');
     // submit Basic Meta btn
     const caloriesBtn = basicMetaForm.querySelector('.caloriesBtn');
 
@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 type.classList.toggle('change');
             } else if (closeFormBg.style.display === 'none') {
                 type.classList.toggle('change');
-            }     
+            }
         }
     }
 
@@ -290,18 +290,18 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function basicMetabolismFormSend() {
-        const oldVal = oldInput.value;
-        const heightVal = heightInputBasicMeta.value;
-        const weightVal = weightInputBasicMeta.value;
+        const oldVal = bmOldInput.value;
+        const heightVal = bmHeightInput.value;
+        const weightVal = bmWeightInput.value;
         const isNumericOld = parseInt(oldVal);
         const isNumericHeight = parseInt(heightVal);
         const isNumericWeight = parseInt(weightVal);
 
         function benedictHarris() {
             var ppm;
-            if (womanBasicMeta.checked) {
+            if (bmWoman.checked) {
                 ppm = 665.1 + (9.5634 * weightVal) + (1.8496 * heightVal) - (4.6756 * oldVal);
-            } else if (menBasicMeta.checked) {
+            } else if (bmMen.checked) {
                 ppm = 66.5 + (13.75 * weightVal) + (5.003 * heightVal) - (6.775 * oldVal);
             }
             return ppmResult.innerText = ppm;
@@ -309,9 +309,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         function mifflinJeor() {
             var ppm;
-            if (womanBasicMeta.checked) {
+            if (bmWoman.checked) {
                 ppm = (10 * weightVal) + (6.25 * heightVal) - (5 * oldVal) - 161;
-            } else if (menBasicMeta.checked) {
+            } else if (bmMen.checked) {
                 ppm = (10 * weightVal) + (6.25 * heightVal) - (5 * oldVal) + 5;
             }
             return ppmResult.innerText = ppm;
@@ -326,100 +326,100 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         function oldAlert() {
-            oldLabel.style.color = "red";
-            oldUnit.style.color = "red";
-            oldInput.style.border = "2px solid red";
+            bmOldLabel.style.color = "red";
+            bmOldUnit.style.color = "red";
+            bmOldInput.style.border = "2px solid red";
         }
 
 
         function heightAlert() {
-            heightBasicMeta.style.color = "red";
-            cmUnitBasicMeta.style.color = "red";
-            heightInputBasicMeta.style.border = "2px solid red";
+            bmHeight.style.color = "red";
+            bmCmUnit.style.color = "red";
+            bmHeightInput.style.border = "2px solid red";
         }
 
         function weightAlert() {
-            weightBasicMeta.style.color = "red";
-            kgUnitBasicMeta.style.color = "red";
-            weightInputBasicMeta.style.border = "2px solid red";
+            bmWeight.style.color = "red";
+            bmKgUnit.style.color = "red";
+            bmWeightInput.style.border = "2px solid red";
         }
 
         function genderAlert() {
-            gender.style.color = "red";
-            genderWoman.style.color = "red";
-            genderMan.style.color = "red";
+            bmGender.style.color = "red";
+            bmGenderWoman.style.color = "red";
+            bmGenderMan.style.color = "red";
         }
 
-        errorLabelBasicMeta.innererrorText = '';
-        gender.style.color = "black";
-        genderWoman.style.color = "black";
-        genderMan.style.color = "black";
-        oldLabel.style.color = "black";
-        oldUnit.style.color = "black";
-        heightBasicMeta.style.color = "black";
-        cmUnitBasicMeta.style.color = "black";
-        weightBasicMeta.style.color = "black";
-        kgUnitBasicMeta.style.color = "black";
+        bmErrorLabel.innererrorText = '';
+        bmGender.style.color = "black";
+        bmGenderWoman.style.color = "black";
+        bmGenderMan.style.color = "black";
+        bmOldLabel.style.color = "black";
+        bmOldUnit.style.color = "black";
+        bmHeight.style.color = "black";
+        bmCmUnit.style.color = "black";
+        bmWeight.style.color = "black";
+        bmKgUnit.style.color = "black";
 
-        oldInput.style.border = "none";
-        heightInputBasicMeta.style.border = "none";
-        weightInputBasicMeta.style.border = "none";
+        bmOldInput.style.border = "none";
+        bmHeightInput.style.border = "none";
+        bmWeightInput.style.border = "none";
 
         if (oldVal !== "" && heightVal !== "" && weightVal !== "") {
             if (isNumericOld && isNumericHeight && isNumericWeight) {
                 if (oldVal >= 6 && oldVal <= 99) {
                     if (heightVal.length > 2) {
                         if (weightVal.length > 1) {
-                            if (menBasicMeta.checked == true || womanBasicMeta.checked == true) {
+                            if (bmMen.checked == true || bmWoman.checked == true) {
                                 methodSelected();
                                 bmiDesc.style.display = 'none';
                                 ppmDesc.style.display = 'none';
                                 ppmScale.style.display = 'block';
                                 ppmDesc.style.display = 'block';
                                 closeFormBg.style.display = "block";
-                                errorLabelBasicMeta.innerText = '';
+                                bmErrorLabel.innerText = '';
 
                             } else {
-                                errorLabelBasicMeta.innerText = "Zaznacz płeć!";
+                                bmErrorLabel.innerText = "Zaznacz płeć!";
                                 genderAlert();
                             }
 
                         } else {
-                            errorLabelBasicMeta.innerText = "Podana waga nie jest prawidłowa!";
+                            bmErrorLabel.innerText = "Podana waga nie jest prawidłowa!";
                             weightAlert();
                         }
                     } else {
-                        errorLabelBasicMeta.innerText = "Podany wzrost nie jest prawidłowy!";
+                        bmErrorLabel.innerText = "Podany wzrost nie jest prawidłowy!";
                         heightAlert();
                     }
                 } else {
-                    errorLabelBasicMeta.innerText = "Podany wiek nie jest prawidłowy!";
+                    bmErrorLabel.innerText = "Podany wiek nie jest prawidłowy!";
                     oldAlert();
                 }
             } else {
                 if (isNumericOld && isNumericWeight) {
                     heightAlert();
-                    errorLabelBasicMeta.innerText = "Wzrost musi być liczbą!";
+                    bmErrorLabel.innerText = "Wzrost musi być liczbą!";
                 } else if (isNumericOld && isNumericHeight) {
                     weightAlert();
-                    errorLabelBasicMeta.innerText = "Waga musi być liczbą!";
+                    bmErrorLabel.innerText = "Waga musi być liczbą!";
                 } else if (isNumericHeight && isNumericWeight) {
                     oldAlert();
-                    errorLabelBasicMeta.innerText = "Wiek musi być liczbą!";
+                    bmErrorLabel.innerText = "Wiek musi być liczbą!";
                 } else if (isNumericOld) {
                     heightAlert();
                     weightAlert();
-                    errorLabelBasicMeta.innerText = "Wzrost i waga muszą być liczbami!";
+                    bmErrorLabel.innerText = "Wzrost i waga muszą być liczbami!";
                 } else if (isNumericHeight) {
                     oldAlert();
                     weightAlert();
-                    errorLabelBasicMeta.innerText = "Wiek i waga muszą być liczbami!";
+                    bmErrorLabel.innerText = "Wiek i waga muszą być liczbami!";
                 } else if (isNumericWeight) {
                     oldAlert();
                     heightAlert();
-                    errorLabelBasicMeta.innerText = "Wiek i wzrost muszą być liczbami!";
+                    bmErrorLabel.innerText = "Wiek i wzrost muszą być liczbami!";
                 } else {
-                    errorLabelBasicMeta.innerText = "Podane parametry nie są liczbami!";
+                    bmErrorLabel.innerText = "Podane parametry nie są liczbami!";
                     oldAlert();
                     heightAlert();
                     weightAlert();
@@ -450,8 +450,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 heightAlert();
                 weightAlert();
             }
-            errorLabelBasicMeta.style.color = "red";
-            errorLabelBasicMeta.innerText = "Wypełnij dane formularza!";
+            bmErrorLabel.style.color = "red";
+            bmErrorLabel.innerText = "Wypełnij dane formularza!";
         }
     }
 
@@ -493,6 +493,60 @@ document.addEventListener("DOMContentLoaded", function () {
         toggleHamburger(hamburgerBtn);
         toggleMenu();
     });
+
+    // FORM 3 - BASIC METABOLISM CALCULATOR
+
+    //const basicMetaForm = document.querySelector('.basicMetabolism');
+
+    const tmForm = totalMetaForm.querySelector('.tmForm');
+
+    //gender labels
+    const tmGender = tmForm.querySelector('#genderType');
+    const tmGenderWoman = tmForm.querySelector('#genderWoman');
+    const tmGenderMan = tmForm.querySelector('#genderMan');
+
+    //sex
+    const tmWomanBasicMeta = tmForm.querySelector('.womanRadio');
+    const tmMenBasicMeta = tmForm.querySelector('.menRadio');
+
+    //old labels and input
+    const tmOldLabel = tmForm.querySelector('#oldLabel');
+    const tmOldInput = tmForm.querySelector('.thirdInputBmi');
+    const tmOldUnit = tmForm.querySelector('#oldUnit');
+
+    //height labels and unit
+
+    const tmHeight = tmForm.querySelector('#heightLabel');
+    const tmHeightInput = tmForm.querySelector('.firstInputBmi');
+    const tmCmUnit = tmForm.querySelector('#cmUnit');
+
+    //weight labels and unit
+
+    const tmWeight = tmForm.querySelector('#weightLabel');
+    const tmWeightInput = tmForm.querySelector('.secondInputBmi');
+    const tmKgUnit = tmForm.querySelector('#kgUnit');
+
+    //option 
+    const tmActivity = tmForm.querySelector('.activity');
+    const zeroActivity = tmActivity.children[0];
+    const smallActivity = tmActivity.children[1];
+    const mediumActivity = tmActivity.children[2];
+    const bigActivity = tmActivity.children[3];
+    const veryBigActivity = tmActivity.children[4];
+
+    // error btn
+
+    const tmErrorLabel = tmForm.querySelector('.errorLabel');
+    // submit Basic Meta btn
+    const tmBtn = basicMetaForm.querySelector('.totalMetabolismBtn');
+
+
+
+
+
+
+
+
 
     init();
 });

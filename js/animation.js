@@ -323,6 +323,20 @@ document.addEventListener("DOMContentLoaded", function () {
             return ppm;
         }
 
+        function methodSelected() {
+            if (methodOne.selected) {
+                benedictHarris();
+                console.log(benedictHarris());
+            } else if (methodTwo.selected) {
+                mifflinJeor()
+                console.log(mifflinJeor());
+            }
+        }
+
+
+
+
+
         errorLabelBasicMeta.innererrorText = '';
         gender.style.color = "black";
         genderWoman.style.color = "black";
@@ -340,15 +354,61 @@ document.addEventListener("DOMContentLoaded", function () {
         weightInputBasicMeta.style.border = "none";
 
         if (oldVal !== "" && heightVal !== "" && weightVal !== "") {
-            ///dalej
-            if (methodOne.selected) {
-                benedictHarris();
-                console.log(benedictHarris());
-            } else if (methodTwo.selected) {
-                mifflinJeor()
-                console.log(mifflinJeor());
+            if (isNumericOld && isNumericHeight && isNumericWeight) {
+                if (oldVal >= 6 && oldVal <= 99) {
+                    if (heightVal.length > 2) {
+                        if (weightVal.length > 1) {
+                            if (menBasicMeta.checked == true || womanBasicMeta.checked == true) {
+
+                                errorLabelBasicMeta.innererrorText = '';
+                                methodSelected();
+                                ///dalej
+
+
+
+
+                            } else {
+                                errorLabelBasicMeta.style.color = "red";
+                                errorLabelBasicMeta.innerText = "Zaznacz płeć!";
+                                gender.style.color = "red";
+                                genderWoman.style.color = "red";
+                                genderMan.style.color = "red";
+                            }
+
+                        } else {
+                            errorLabelBasicMeta.style.color = "red";
+                            errorLabelBasicMeta.innerText = "Podana waga nie jest prawidłowa!";
+                            weightBasicMeta.style.color = "red";
+                            kgUnitBasicMeta.style.color = "red";
+                            weightInputBasicMeta.style.border = "2px solid red";
+                        }
+                    } else {
+                        errorLabelBasicMeta.style.color = "red";
+                        errorLabelBasicMeta.innerText = "Podany wzrost nie jest prawidłowy!";
+                        heightBasicMeta.style.color = "red";
+                        cmUnitBasicMeta.style.color = "red";
+                        heightInputBasicMeta.style.border = "2px solid red";
+                    }
+                } else {
+                    errorLabelBasicMeta.style.color = "red";
+                    errorLabelBasicMeta.innerText = "Podany wiek nie jest prawidłowy!";
+                    oldLabel.style.color = "red";
+                    oldUnit.style.color = "red";
+                    oldInput.style.border = "2px solid red";
+                }
+            } else {
+                errorLabelBasicMeta.style.color = "red";
+                errorLabelBasicMeta.innerText = "Jeden lub więcej parametrów nie jest liczbą!";
+                oldLabel.style.color = "red";
+                oldUnit.style.color = "red";
+                oldInput.style.border = "2px solid red";
+                heightBasicMeta.style.color = "red";
+                cmUnitBasicMeta.style.color = "red";
+                heightInputBasicMeta.style.border = "2px solid red";
+                weightBasicMeta.style.color = "red";
+                kgUnitBasicMeta.style.color = "red";
+                weightInputBasicMeta.style.border = "2px solid red";
             }
-            errorLabelBasicMeta.innererrorText = '';
         } else {
             if (oldVal !== "" && heightVal == "" && weightVal == "") {
                 heightBasicMeta.style.color = "red";
@@ -357,6 +417,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 weightBasicMeta.style.color = "red";
                 kgUnitBasicMeta.style.color = "red";
                 weightInputBasicMeta.style.border = "2px solid red";
+            } else if (oldVal !== "" && heightVal !== "" && weightVal == "") {
+                weightBasicMeta.style.color = "red";
+                kgUnitBasicMeta.style.color = "red";
+                weightInputBasicMeta.style.border = "2px solid red";
+            } else if (oldVal !== "" && heightVal == "" && weightVal !== "") {
+                heightBasicMeta.style.color = "red";
+                cmUnitBasicMeta.style.color = "red";
+                heightInputBasicMeta.style.border = "2px solid red";
             } else if (heightVal !== "" && oldVal == "" && weightVal == "") {
                 oldLabel.style.color = "red";
                 oldUnit.style.color = "red";
@@ -364,10 +432,22 @@ document.addEventListener("DOMContentLoaded", function () {
                 weightBasicMeta.style.color = "red";
                 kgUnitBasicMeta.style.color = "red";
                 weightInputBasicMeta.style.border = "2px solid red";
+            } else if (heightVal !== "" && oldVal !== "" && weightVal == "") {
+                weightBasicMeta.style.color = "red";
+                kgUnitBasicMeta.style.color = "red";
+                weightInputBasicMeta.style.border = "2px solid red";
+            } else if (heightVal !== "" && oldVal == "" && weightVal !== "") {
+                oldLabel.style.color = "red";
+                oldUnit.style.color = "red";
+                oldInput.style.border = "2px solid red";
             } else if (weightVal !== "" && heightVal == "" && oldVal == "") {
                 oldLabel.style.color = "red";
                 oldUnit.style.color = "red";
                 oldInput.style.border = "2px solid red";
+                heightBasicMeta.style.color = "red";
+                cmUnitBasicMeta.style.color = "red";
+                heightInputBasicMeta.style.border = "2px solid red";
+            } else if (weightVal !== "" && heightVal !== "" && oldVal == "") {
                 heightBasicMeta.style.color = "red";
                 cmUnitBasicMeta.style.color = "red";
                 heightInputBasicMeta.style.border = "2px solid red";
@@ -385,9 +465,6 @@ document.addEventListener("DOMContentLoaded", function () {
             errorLabelBasicMeta.style.color = "red";
             errorLabelBasicMeta.innerText = "Wypełnij dane formularza!";
         }
-
-
-
 
         /// selected method
         //        if (methodOne.selected) {

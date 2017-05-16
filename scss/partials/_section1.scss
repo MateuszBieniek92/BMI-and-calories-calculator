@@ -279,7 +279,12 @@ section {
 }
 
 .visible {
-    display: none;
+    label {
+        color: red;
+    }
+    input {
+        border: 2px solid red;
+    }
 }
 
 .bgClick {

@@ -3,7 +3,7 @@
  One page website presenting three calculators: BMI, basic metabolism and total metabolism.
  
  BMI calculator - done <br>
- Basic metabolism calculator - In progress... :) <br>
+ Basic metabolism calculator - done <br>
  Total metabolism calculator - In progress... :)
  
 ## Used technologies: 

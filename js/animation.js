@@ -47,12 +47,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const result = closeFormBg.querySelector('.result');
     const bmiDesc = closeFormBg.querySelector('.bmidesc');
     const ppmDesc = closeFormBg.querySelector('.ppmdesc');
+    const tpmDesc = closeFormBg.querySelector('.tpmdesc');
     const ppmResult = ppmDesc.querySelector('.result');
+    const tpmResult = tpmDesc.querySelector('.result');
     const desc = bmiDesc.querySelector('.description');
     const head = closeFormBg.querySelector('.head');
     const errorText = document.querySelector('.errorLabel');
     const bmiScale = document.querySelector('.bmiScale');
     const ppmScale = document.querySelector('.ppmScale');
+    const tpmScale = document.querySelector('.tpmScale');
 
     // FORM 2 - BASIC METABOLISM CALCULATOR
 
@@ -104,8 +107,10 @@ document.addEventListener("DOMContentLoaded", function () {
         totalMetaForm.style.display = 'none';
         bmiDesc.style.display = 'none';
         ppmDesc.style.display = 'none';
+        tpmDesc.style.display = 'none';
         bmiScale.style.display = 'none';
         ppmScale.style.display = 'none';
+        tpmScale.style.display = 'none';
     }
 
     function resetSendForm() {
@@ -305,7 +310,7 @@ document.addEventListener("DOMContentLoaded", function () {
             } else if (bmMen.checked) {
                 ppm = 66.5 + (13.75 * weightVal) + (5.003 * heightVal) - (6.775 * oldVal);
             }
-            return ppmResult.innerText = roundNumber(ppm,2);
+            return ppmResult.innerText = roundNumber(ppm, 2);
         }
 
         function mifflinJeor() {
@@ -315,7 +320,7 @@ document.addEventListener("DOMContentLoaded", function () {
             } else if (bmMen.checked) {
                 ppm = (10 * weightVal) + (6.25 * heightVal) - (5 * oldVal) + 5;
             }
-            return ppmResult.innerText = roundNumber(ppm,2);
+            return ppmResult.innerText = roundNumber(ppm, 2);
         }
 
         function methodSelected() {
@@ -325,7 +330,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 mifflinJeor();
             }
         }
-        
+
 
         function oldAlert() {
             bmOldLabel.style.color = "red";
@@ -588,7 +593,7 @@ document.addEventListener("DOMContentLoaded", function () {
             } else if (tmMen.checked) {
                 ppm = (10 * weightVal) + (6.25 * heightVal) - (5 * oldVal) + 5;
             }
-            return roundNumber(ppm,2);
+            return roundNumber(ppm, 2);
         }
 
         function active() {
@@ -612,7 +617,7 @@ document.addEventListener("DOMContentLoaded", function () {
         function cpmResult() {
             var cpm;
             cpm = mifflinJeor() * active();
-            return roundNumber(cpm,2);
+            return tpmResult.innerText =  roundNumber(cpm, 2);
         }
 
         tmErrorLabel.innererrorText = '';
@@ -638,6 +643,8 @@ document.addEventListener("DOMContentLoaded", function () {
                             if (tmMen.checked == true || tmWoman.checked == true) {
                                 cpmResult();
                                 console.log(cpmResult());
+                                tpmScale.style.display = 'block';
+                                tpmDesc.style.display = 'block';
 
                                 bmiDesc.style.display = 'none';
                                 ppmDesc.style.display = 'none';

@@ -71,14 +71,16 @@ section {
         background-image: url(../photos/background_photo.png);
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: center; //top;
+        background-position: 18%; //top;
         height: 115vh;
         position: absolute;
         width: 100vw;
         @media (min-width: 450px) {
+             background-position: 10%; //top;
             height: 95vh;
         }
         @media (min-width: 900px) {
+            background-position: center;
             height: 80vh;
             margin-top: 0;
             left: 25px;
@@ -100,7 +102,7 @@ section {
     border-radius: 2px;
     display: block;
     margin: auto;
-    box-shadow: 0px 0px 31px 0px rgba(0,0,0,0.52);
+    box-shadow: 0px 0px 31px 0px rgba(0, 0, 0, 0.52);
     @media (min-width: 450px) {
         width: 350px;
         height: 550px;
@@ -289,7 +291,7 @@ section {
 }
 
 .bgClick {
-        display: none;
+    display: none;
     width: 100vw;
     height: 125vh;
     z-index: 500;
@@ -324,13 +326,19 @@ section {
             }
         }
         p {
-            font-size: 20px;
+            font-size: 14px;
             text-align: center;
             padding: 20px;
             span {
-                font-size: 20px;
+                font-size: 14px;
                 font-weight: 600;
                 color: $bgLogoColor;
+                @media (min-width: 450px) {
+                    font-size: 20px;
+                }
+            }
+            @media (min-width: 450px) {
+                font-size: 20px;
             }
         }
     }

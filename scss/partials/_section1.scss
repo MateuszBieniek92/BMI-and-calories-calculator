@@ -69,13 +69,14 @@ header {
 section {
     .photo {
         background-image: url(../photos/background_photo.png);
-        background-size: cover;
+       // background-size: cover;
         background-repeat: no-repeat;
         background-position: 18%; //top;
         height: 115vh;
         position: absolute;
         width: 100vw;
         @media (min-width: 450px) {
+            background-size: cover;
              background-position: 10%; //top;
             height: 95vh;
         }

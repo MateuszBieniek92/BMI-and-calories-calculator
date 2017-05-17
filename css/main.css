@@ -159,7 +159,6 @@ header .navigation li a:focus {
 /* line 120, scss/main.css */
 section .photo {
   background-image: url(../photos/background_photo.png);
-  background-size: cover;
   background-repeat: no-repeat;
   background-position: 18%;
   height: 115vh;
@@ -167,8 +166,9 @@ section .photo {
   width: 100vw; }
 
 @media (min-width: 450px) {
-  /* line 129, scss/main.css */
+  /* line 128, scss/main.css */
   section .photo {
+    background-size: cover;
     background-position: 10%;
     height: 95vh; } }
 

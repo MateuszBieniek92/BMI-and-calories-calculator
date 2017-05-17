@@ -100,6 +100,52 @@ document.addEventListener("DOMContentLoaded", function () {
     // submit Basic Meta btn
     const caloriesBtn = basicMetaForm.querySelector('.caloriesBtn');
 
+    // FORM 3 - BASIC METABOLISM CALCULATOR
+
+    //const basicMetaForm = document.querySelector('.basicMetabolism');
+
+    const tmForm = totalMetaForm.querySelector('.tmForm');
+
+    //gender labels
+    const tmGender = tmForm.querySelector('#genderType');
+    const tmGenderWoman = tmForm.querySelector('#genderWoman');
+    const tmGenderMan = tmForm.querySelector('#genderMan');
+
+    //sex
+    const tmWoman = tmForm.querySelector('.womanRadio');
+    const tmMen = tmForm.querySelector('.menRadio');
+
+    //old labels and input
+    const tmOldLabel = tmForm.querySelector('#oldLabel');
+    const tmOldInput = tmForm.querySelector('.thirdInputBmi');
+    const tmOldUnit = tmForm.querySelector('#oldUnit');
+
+    //height labels and unit
+
+    const tmHeight = tmForm.querySelector('#heightLabel');
+    const tmHeightInput = tmForm.querySelector('.firstInputBmi');
+    const tmCmUnit = tmForm.querySelector('#cmUnit');
+
+    //weight labels and unit
+
+    const tmWeight = tmForm.querySelector('#weightLabel');
+    const tmWeightInput = tmForm.querySelector('.secondInputBmi');
+    const tmKgUnit = tmForm.querySelector('#kgUnit');
+
+    //option 
+    const tmActivity = tmForm.querySelector('.activity');
+    const zeroActivity = tmActivity.children[0];
+    const smallActivity = tmActivity.children[1];
+    const mediumActivity = tmActivity.children[2];
+    const activeActivity = tmActivity.children[3];
+    const bigActivity = tmActivity.children[4];
+    const veryBigActivity = tmActivity.children[5];
+
+    // error btn
+
+    const tmErrorLabel = tmForm.querySelector('.errorLabel');
+    // submit Basic Meta btn
+    const tmBtn = totalMetaForm.querySelector('.totalMetabolismBtn');
 
     function init() {
         bmiForm.style.display = 'block';
@@ -147,11 +193,11 @@ document.addEventListener("DOMContentLoaded", function () {
     function toggleHamburger(type) {
         if (mobile.matches) {
             type.classList.toggle('change');
-            if (closeFormBg.style.display === 'block') {
-                type.classList.toggle('change');
-            } else if (closeFormBg.style.display === 'none') {
-                type.classList.toggle('change');
-            }
+//            if (closeFormBg.style.display === 'block') {
+//                type.classList.toggle('change');
+//            } else if (closeFormBg.style.display === 'none') {
+//                type.classList.toggle('change');
+//            }
         }
     }
 
@@ -159,8 +205,8 @@ document.addEventListener("DOMContentLoaded", function () {
         if (mobile.matches) {
             if (navigation.style.display === 'block') {
                 navigation.style.display = 'none';
-            } else if (closeFormBg.style.display === "block") {
-                navigation.style.display = 'none';
+//            } else if (closeFormBg.style.display === "block") {
+//                navigation.style.display = 'none';
             } else {
                 navigation.style.display = 'block';
             }
@@ -463,94 +509,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // CLICK EVENTS    
-
-    firstMenuBtn.addEventListener('click', function () {
-        firstFormShow();
-    });
-
-    secondMenuBtn.addEventListener('click', function () {
-        secondFormShow();
-    });
-
-    thirdMenuBtn.addEventListener('click', function () {
-        thirdFormShow();
-    });
-
-    hamburgerBtn.addEventListener('click', function () {
-        toggleHamburger(this);
-        toggleMenu();
-    });
-
-    bmiBtn.addEventListener('click', function (e) {
-        e.preventDefault();
-        bmiFormSend();
-        toggleHamburger(hamburgerBtn);
-        toggleMenu();
-    });
-
-    closeFormBtn.addEventListener('click', function () {
-        closeForm();
-        resetForm();
-        resetSendForm();
-    });
-
-    caloriesBtn.addEventListener('click', function (e) {
-        e.preventDefault();
-        basicMetabolismFormSend();
-        toggleHamburger(hamburgerBtn);
-        toggleMenu();
-    });
-
-    // FORM 3 - BASIC METABOLISM CALCULATOR
-
-    //const basicMetaForm = document.querySelector('.basicMetabolism');
-
-    const tmForm = totalMetaForm.querySelector('.tmForm');
-
-    //gender labels
-    const tmGender = tmForm.querySelector('#genderType');
-    const tmGenderWoman = tmForm.querySelector('#genderWoman');
-    const tmGenderMan = tmForm.querySelector('#genderMan');
-
-    //sex
-    const tmWoman = tmForm.querySelector('.womanRadio');
-    const tmMen = tmForm.querySelector('.menRadio');
-
-    //old labels and input
-    const tmOldLabel = tmForm.querySelector('#oldLabel');
-    const tmOldInput = tmForm.querySelector('.thirdInputBmi');
-    const tmOldUnit = tmForm.querySelector('#oldUnit');
-
-    //height labels and unit
-
-    const tmHeight = tmForm.querySelector('#heightLabel');
-    const tmHeightInput = tmForm.querySelector('.firstInputBmi');
-    const tmCmUnit = tmForm.querySelector('#cmUnit');
-
-    //weight labels and unit
-
-    const tmWeight = tmForm.querySelector('#weightLabel');
-    const tmWeightInput = tmForm.querySelector('.secondInputBmi');
-    const tmKgUnit = tmForm.querySelector('#kgUnit');
-
-    //option 
-    const tmActivity = tmForm.querySelector('.activity');
-    const zeroActivity = tmActivity.children[0];
-    const smallActivity = tmActivity.children[1];
-    const mediumActivity = tmActivity.children[2];
-    const activeActivity = tmActivity.children[3];
-    const bigActivity = tmActivity.children[4];
-    const veryBigActivity = tmActivity.children[5];
-
-    // error btn
-
-    const tmErrorLabel = tmForm.querySelector('.errorLabel');
-    // submit Basic Meta btn
-    const tmBtn = totalMetaForm.querySelector('.totalMetabolismBtn');
-
-
-
     function totalMetabolismFormSend() {
         const oldVal = tmOldInput.value;
         const heightVal = tmHeightInput.value;
@@ -617,7 +575,7 @@ document.addEventListener("DOMContentLoaded", function () {
         function cpmResult() {
             var cpm;
             cpm = mifflinJeor() * active();
-            return tpmResult.innerText =  roundNumber(cpm, 2);
+            return tpmResult.innerText = roundNumber(cpm, 2);
         }
 
         tmErrorLabel.innererrorText = '';
@@ -731,15 +689,54 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // CLICK EVENTS    
+
+    firstMenuBtn.addEventListener('click', function () {
+        firstFormShow();
+    });
+
+    secondMenuBtn.addEventListener('click', function () {
+        secondFormShow();
+    });
+
+    thirdMenuBtn.addEventListener('click', function () {
+        thirdFormShow();
+    });
+
+    hamburgerBtn.addEventListener('click', function () {
+        toggleHamburger(this);
+        toggleMenu();
+    });
+
+    bmiBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        bmiFormSend();
+//        toggleHamburger(hamburgerBtn);
+//        toggleMenu();
+    });
+
+    closeFormBtn.addEventListener('click', function () {
+        closeForm();
+        resetForm();
+        resetSendForm();
+    });
+
+    caloriesBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        basicMetabolismFormSend();
+//        toggleHamburger(hamburgerBtn);
+//        toggleMenu();
+    });
 
     tmBtn.addEventListener('click', function (e) {
         e.preventDefault();
         totalMetabolismFormSend();
-        toggleHamburger(hamburgerBtn);
-        toggleMenu();
+//        toggleHamburger(hamburgerBtn);
+//        toggleMenu();
     });
 
 
+    
 
 
 

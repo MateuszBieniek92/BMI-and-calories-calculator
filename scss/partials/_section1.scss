@@ -68,16 +68,18 @@ header {
 
 section {
     .photo {
-        background-image: url(../photos/background_photo.png);
-       // background-size: cover;
-        background-repeat: no-repeat;
-        background-position: 18%; //top;
-        height: 115vh;
-        position: absolute;
-        width: 100vw;
+        @media (orientation) {
+            background-image: url(../photos/background_photo.png);
+            // background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 18%; //top;
+            height: 45em;
+            position: absolute;
+            width: 100vw;
+        }
         @media (min-width: 450px) {
             background-size: cover;
-             background-position: 10%; //top;
+            background-position: 10%; //top;
             height: 95vh;
         }
         @media (min-width: 900px) {
@@ -96,7 +98,7 @@ section {
 
 .formBackground {
     width: 95vw;
-    height: 80vh;
+    height: 35em;
     background: rgba(255, 255, 255, 0.8);
     position: relative;
     top: 30px;

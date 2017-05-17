@@ -72,14 +72,14 @@ section {
             background-image: url(../photos/background_photo.png);
             // background-size: cover;
             background-repeat: no-repeat;
-            background-position: 18%; //top;
-            height: 48em;
+            background-position: 18%; 
+            height: 52em;
             position: absolute;
             width: 100vw;
         }
         @media (min-width: 450px) {
             background-size: cover;
-            background-position: 10%; //top;
+            background-position: 10%; 
             height: 95vh;
         }
         @media (min-width: 900px) {

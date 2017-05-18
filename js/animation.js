@@ -16,6 +16,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const hamburgerBtn = document.querySelector('.hamburger');
     const navigation = document.querySelector('.navigation');
     const navigationChildren = navigation.querySelectorAll('li');
+    
+    //photo div
+    const photo = document.querySelector('.photo');
 
     //form variables
     const form = document.querySelector('.bmiForm');
@@ -251,6 +254,7 @@ document.addEventListener("DOMContentLoaded", function () {
             } else if (18.50 < bmi && bmi < 24.99) {
                 head.innerText = 'Gratulacje!';
                 desc.innerText = 'wagę prawidłową';
+                                result.style.color = '';
             } else if (25.00 < bmi && bmi < 29.99) {
                 head.innerText = 'Uwaga!';
                 desc.innerText = 'nadwagę';
@@ -711,19 +715,17 @@ document.addEventListener("DOMContentLoaded", function () {
     bmiBtn.addEventListener('click', function (e) {
         e.preventDefault();
         bmiFormSend();
+        photo.style.display = "none";
 //        toggleHamburger(hamburgerBtn);
 //        toggleMenu();
     });
 
-    closeFormBtn.addEventListener('click', function () {
-        closeForm();
-        resetForm();
-        resetSendForm();
-    });
+
 
     caloriesBtn.addEventListener('click', function (e) {
         e.preventDefault();
         basicMetabolismFormSend();
+        photo.style.display = "none";
 //        toggleHamburger(hamburgerBtn);
 //        toggleMenu();
     });
@@ -731,18 +733,16 @@ document.addEventListener("DOMContentLoaded", function () {
     tmBtn.addEventListener('click', function (e) {
         e.preventDefault();
         totalMetabolismFormSend();
+        photo.style.display = "none";
 //        toggleHamburger(hamburgerBtn);
 //        toggleMenu();
     });
-
-
-    
-
-
-
-
-
-
+    closeFormBtn.addEventListener('click', function () {
+        closeForm();
+        resetForm();
+        resetSendForm();
+        photo.style.display = "block";
+    });
 
     init();
 });

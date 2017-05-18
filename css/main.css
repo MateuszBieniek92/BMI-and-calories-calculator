@@ -162,7 +162,7 @@ header .navigation li a:focus {
     background-image: url(../photos/background_photo.png);
     background-repeat: no-repeat;
     background-position: 18%;
-    height: 48em;
+    height: 52em;
     position: absolute;
     width: 100vw; } }
 
@@ -530,7 +530,7 @@ header .navigation li a:focus {
 .bgClick {
   display: none;
   width: 100vw;
-  height: 125vh;
+  height: 100vh;
   z-index: 500;
   opacity: 1;
   position: absolute;

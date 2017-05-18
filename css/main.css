@@ -548,7 +548,7 @@ header .navigation li a:focus {
 /* line 456, scss/main.css */
 .bgClick .finalFormBg {
   right: 0;
-  top: 85px;
+  top: 35px;
   width: 90vw;
   height: 500px;
   background: white; }
@@ -655,7 +655,7 @@ header .navigation li a:focus {
   background: #ff971f;
   text-align: center;
   position: relative;
-  margin: 0px auto;
+  margin: -35px auto;
   margin-left: auto; }
 
 @media (min-width: 450px) {
@@ -663,7 +663,7 @@ header .navigation li a:focus {
   .bgClick .closeFormBtn {
     width: 265px;
     height: 50px;
-    margin: 50px auto; } }
+    margin: -10px auto; } }
 
 /* line 540, scss/main.css */
 .bgClick .closeFormBtn p {

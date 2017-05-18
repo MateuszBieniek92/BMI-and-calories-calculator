@@ -311,7 +311,7 @@ section {
     }
     .finalFormBg {
         right: 0;
-        top: 85px;
+        top: 35px;
         width: 90vw;
         height: 500px;
         background: rgba(255, 255, 255, 1);
@@ -379,6 +379,7 @@ section {
                 font-size: 15px;
             }
         }
+        
     }
     .closeFormBtn {
         cursor: pointer;
@@ -388,12 +389,12 @@ section {
         background: $bgLogoColor;
         text-align: center;
         position: relative;
-        margin: 0px auto;
+        margin: -35px auto;
         margin-left: auto;
         @media (min-width: 450px) {
             width: 265px;
             height: 50px;
-            margin: 50px auto;
+            margin: -10px auto;
         }
         p {
             text-shadow: 1px 1px 3px #854900;

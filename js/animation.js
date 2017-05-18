@@ -741,6 +741,7 @@ document.addEventListener("DOMContentLoaded", function () {
         closeForm();
         resetForm();
         resetSendForm();
+        init();
         photo.style.display = "block";
     });
 

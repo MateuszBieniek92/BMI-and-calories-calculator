@@ -105,8 +105,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // FORM 3 - BASIC METABOLISM CALCULATOR
 
-    //const basicMetaForm = document.querySelector('.basicMetabolism');
-
     const tmForm = totalMetaForm.querySelector('.tmForm');
 
     //gender labels
@@ -196,11 +194,6 @@ document.addEventListener("DOMContentLoaded", function () {
     function toggleHamburger(type) {
         if (mobile.matches) {
             type.classList.toggle('change');
-//            if (closeFormBg.style.display === 'block') {
-//                type.classList.toggle('change');
-//            } else if (closeFormBg.style.display === 'none') {
-//                type.classList.toggle('change');
-//            }
         }
     }
 
@@ -208,8 +201,6 @@ document.addEventListener("DOMContentLoaded", function () {
         if (mobile.matches) {
             if (navigation.style.display === 'block') {
                 navigation.style.display = 'none';
-//            } else if (closeFormBg.style.display === "block") {
-//                navigation.style.display = 'none';
             } else {
                 navigation.style.display = 'block';
             }
@@ -716,26 +707,18 @@ document.addEventListener("DOMContentLoaded", function () {
         e.preventDefault();
         bmiFormSend();
         photo.style.display = "none";
-//        toggleHamburger(hamburgerBtn);
-//        toggleMenu();
     });
-
-
 
     caloriesBtn.addEventListener('click', function (e) {
         e.preventDefault();
         basicMetabolismFormSend();
         photo.style.display = "none";
-//        toggleHamburger(hamburgerBtn);
-//        toggleMenu();
     });
 
     tmBtn.addEventListener('click', function (e) {
         e.preventDefault();
         totalMetabolismFormSend();
         photo.style.display = "none";
-//        toggleHamburger(hamburgerBtn);
-//        toggleMenu();
     });
     closeFormBtn.addEventListener('click', function () {
         closeForm();

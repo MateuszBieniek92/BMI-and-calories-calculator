@@ -4,11 +4,15 @@
  
  BMI calculator - done <br>
  Basic metabolism calculator - done <br>
- Total metabolism calculator - In progress... :)
+ Total metabolism calculator - done :)
  
 ## Used technologies: 
 
-In progress... :)
+* HTML
+* CSS
+* JavaScript
+* RWD
+* SASS
 
 ## Demo:
 

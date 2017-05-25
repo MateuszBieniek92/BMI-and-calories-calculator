@@ -706,19 +706,16 @@ document.addEventListener("DOMContentLoaded", function () {
     bmiBtn.addEventListener('click', function (e) {
         e.preventDefault();
         bmiFormSend();
-        photo.style.display = "none";
-    });
+     });
 
     caloriesBtn.addEventListener('click', function (e) {
         e.preventDefault();
         basicMetabolismFormSend();
-        photo.style.display = "none";
     });
 
     tmBtn.addEventListener('click', function (e) {
         e.preventDefault();
         totalMetabolismFormSend();
-        photo.style.display = "none";
     });
     closeFormBtn.addEventListener('click', function () {
         closeForm();
